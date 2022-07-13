@@ -18,49 +18,18 @@
             name="twitter:image"
             content="https://github.com/PunGrumpy/Grumpy-Website/blob/main/public/card.png?raw=true"
         />
-        <meta property="og:site_name" content="Noppakorn Kaewsalabnil" />
-        <meta name="og:title" content="Noppakorn Kaewsalabnil" />
-        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Grumpy" />
+        <meta name="og:title" content="Grumpy" />
+        <meta property="og:type" content="link bio" />
         <meta
             property="og:image"
             content="https://github.com/PunGrumpy/Grumpy-Website/blob/main/public/card.png?raw=true"
         />
         <link rel="stylesheet" href="./index.css" />
         <link rel="preload" href="./images/bg01.jpg" as="image" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
-        <script>
-            window.addEventListener('DOMContentLoaded', () => {
-                VANTA.BIRDS({
-                    el: '#vanta',
-                    mouseControls: true,
-                    touchControls: true,
-                    gyroControls: true,
-                    minHeight: 200.0,
-                    minWidth: 200.0,
-                    scale: 1.0,
-                    scaleMobile: 1.0,
-                    backgroundAlpha: 0.0,
-                    color1: 0xffffff,
-                    color2: 0xffffff,
-                    colorMode: 'lerpGradient',
-                    wingSpan: 40.0,
-                    separation: 100.0,
-                    alignment: 77.0,
-                    cohesion: 5.0,
-                    quantity: 1.0,
-                });
-
-                setTimeout(() => {
-                    const main = document.querySelector('main');
-                    main.style.opacity = 1;
-                    main.style.filter = 'blur(0px)';
-                }, 1000);
-            });
-        </script>
+        <script src="script.js"></script>
     </head>
     <body>
-        <div id="vanta"></div>
         <main class="animated">
             <header>
                 <img src="./images/grumpy.jpg" />
