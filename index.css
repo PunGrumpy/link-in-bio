@@ -100,8 +100,7 @@ a.copyright {
 }
 
 a.copyright:hover {
-    color: #476776;
-    box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
+    color: #fffa;
     transition: 0.5s;
 }
 
