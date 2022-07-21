@@ -101,7 +101,7 @@ a.copyright {
 
 a.copyright:hover {
     color: #fffa;
-    transition: 0.5s;
+    transition: 0.3s ease-in-out 0.1s;
 }
 
 footer {
