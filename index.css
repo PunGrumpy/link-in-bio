@@ -68,7 +68,16 @@ ul > li {
     transition: 0.5s;
 }
 
-ul > li :hover {
+ul > li > a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    padding: 1em;
+}
+
+ul > li > a.link:hover {
     left: 12px;
     top: 10px;
     background: #476776;
@@ -77,15 +86,6 @@ ul > li :hover {
     color: #fff;
     box-shadow: 8px 8px #283b43;
     transition: 0.5s;
-}
-
-ul > li > a {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5em;
-    padding: 1em;
 }
 
 a {
@@ -101,9 +101,10 @@ a.copyright {
 
 a.copyright:hover {
     color: #fffa;
-    transition: 0.3s ease-in-out 0.1s;
+    transition: 0.4s ease-in-out 0.1s;
 }
 
 footer {
     padding: 3em;
+    font-size: 10px;
 }
