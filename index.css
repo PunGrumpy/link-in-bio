@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    background: url(./images/Vyragami.jpeg) no-repeat center center fixed;
+    background: url(./images/dark-snow.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -62,9 +62,21 @@ ul > li {
     background-color: #fffa;
     backdrop-filter: blur(10px) saturate(160%) contrast(180%);
     -webkit-backdrop-filter: blur(10px) saturate(160%) contrast(180%);
-    border-radius: 10em;
+    border-radius: 20px;
     margin: 1.4em 0;
     box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
+    transition: 0.5s;
+}
+
+ul > li :hover {
+    left: 12px;
+    top: 10px;
+    background: #476776;
+    border-radius: 20px;
+    margin: 1.4em 0;
+    color: #fff;
+    box-shadow: 8px 8px #283b43;
+    transition: 0.5s;
 }
 
 ul > li > a {
@@ -84,6 +96,10 @@ a {
 a.copyright {
     color: rgb(255, 255, 255);
     text-decoration: none;
+}
+
+a.copyright:hover {
+    color: rgb(206, 206, 206);
 }
 
 footer {
