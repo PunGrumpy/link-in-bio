@@ -94,12 +94,15 @@ a {
 }
 
 a.copyright {
-    color: rgb(255, 255, 255);
+    color: #fff;
     text-decoration: none;
+    transition: 0.5s;
 }
 
 a.copyright:hover {
-    color: rgb(206, 206, 206);
+    color: #476776;
+    box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
+    transition: 0.5s;
 }
 
 footer {
