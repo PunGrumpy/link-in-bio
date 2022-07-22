@@ -88,6 +88,13 @@ ul > li > a.link:hover {
     transition: 0.5s;
 }
 
+ul > li > a.link:active {
+    background: #476776;
+    color: #fff;
+    box-shadow: -0px 0px #283b43;
+    transition: 0.5s;
+}
+
 a {
     color: black;
     text-decoration: none;
