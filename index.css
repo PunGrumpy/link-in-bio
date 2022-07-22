@@ -22,7 +22,7 @@ main.animated {
 }
 
 header {
-    margin-top: 3em;
+    margin-top: 2.5em;
     text-align: center;
     display: flex;
     flex-direction: column;
