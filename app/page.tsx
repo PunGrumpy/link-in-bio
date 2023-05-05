@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from './layout'
 import Image from 'next/image'
 import { ParallaxCard } from './ParallaxCard'
+import data from './data.json'
 
 const LinkCard: React.FC<{ href: string; title: string }> = ({
   href,
@@ -20,19 +21,7 @@ const LinkCard: React.FC<{ href: string; title: string }> = ({
 )
 
 const HomePage: React.FC = () => {
-  const links = [
-    { href: 'https://pungrumpy.com', title: 'Official Website' },
-    { href: 'https://www.instagram.com/wtpp_p114', title: 'Instagram' },
-    {
-      href: 'https://www.facebook.com/lnoppakornl.lkaewsalabnill',
-      title: 'Facebook'
-    },
-    {
-      href: 'https://www.linkedin.com/in/noppakorn-kaewsalabnil',
-      title: 'LinkedIn'
-    },
-    { href: 'https://github.com/PunGrumpy', title: 'GitHub' }
-  ]
+  const { links } = data
 
   return (
     <Layout title="Link in Bio" description="Link in Bio for Instagram">
