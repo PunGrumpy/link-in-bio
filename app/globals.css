@@ -10,6 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-wrap: break-word;
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .box {
@@ -21,6 +22,7 @@ body {
   position: absolute;
   inset: 0;
   border-radius: 10px;
+  border-style: calc(1px * var(--border-style, 1));
   padding: 1px;
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;

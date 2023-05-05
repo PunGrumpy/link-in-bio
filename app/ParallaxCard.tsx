@@ -27,7 +27,7 @@ export const ParallaxCard: React.FC<ParallaxCardProps> = ({ children }) => {
   return (
     <animated.div
       ref={ref}
-      className="box relative px-4 py-10 bg-[rgba(0,0,0,0.6)] bg-opacity-60 backdrop-blur-md shadow-lg sm:rounded-3xl sm:p-20"
+      className="relative px-4 py-10 bg-[rgba(0,0,0,0.6)] bg-opacity-60 backdrop-blur-md shadow-lg sm:rounded-3xl sm:p-20 rounded-xl border-[0.5px] border-[rgba(255,255,255,0.1)]"
       onMouseMove={({ clientX: x, clientY: y }) =>
         set({
           xys: calc(x, y),

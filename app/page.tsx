@@ -9,7 +9,7 @@ const LinkCard: React.FC<{ href: string; title: string }> = ({
 }) => (
   <li>
     <a
-      className="block px-6 py-3 rounded-lg text-white font-mplus font-bold text-center"
+      className="box block px-6 py-3 rounded-lg text-white font-mplus font-bold text-center hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.1)]"
       href={href}
       target="_blank"
       rel="noopener noreferrer"
@@ -21,13 +21,21 @@ const LinkCard: React.FC<{ href: string; title: string }> = ({
 
 const HomePage: React.FC = () => {
   const links = [
-    { href: 'https://example.com', title: 'Example Link 1' },
-    { href: 'https://example.com', title: 'Example Link 2' },
-    { href: 'https://example.com', title: 'Example Link 3' }
+    { href: 'https://pungrumpy.com', title: 'Official Website' },
+    { href: 'https://www.instagram.com/wtpp_p114', title: 'Instagram' },
+    {
+      href: 'https://www.facebook.com/lnoppakornl.lkaewsalabnill',
+      title: 'Facebook'
+    },
+    {
+      href: 'https://www.linkedin.com/in/noppakorn-kaewsalabnil',
+      title: 'LinkedIn'
+    },
+    { href: 'https://github.com/PunGrumpy', title: 'GitHub' }
   ]
 
   return (
-    <Layout title="Link in Bio" description="Link in Bio Vertical Website">
+    <Layout title="Link in Bio" description="Link in Bio for Instagram">
       <div
         className="min-h-screen bg-cover bg-center py-6 flex flex-col justify-center sm:py-12"
         style={{ backgroundImage: "url('/background.jpg')" }}
@@ -43,10 +51,10 @@ const HomePage: React.FC = () => {
                 height={128}
               />
             </div>
-            <h1 className="text-4xl font-mplus font-bold text-center mb-4 text-white">
-              My Links
+            <h1 className="text-3xl font-mplus font-bold text-center mb-8 text-white">
+              Link in Bio
             </h1>
-            <ul className="space-y-4">
+            <ul className="space-y-4 sm:mb-2">
               {links.map((link, index) => (
                 <LinkCard key={index} href={link.href} title={link.title} />
               ))}
