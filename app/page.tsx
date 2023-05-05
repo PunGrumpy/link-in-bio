@@ -10,7 +10,7 @@ const LinkCard: React.FC<{ href: string; title: string }> = ({
 }) => (
   <li>
     <a
-      className="box block px-6 py-3 rounded-lg text-white font-mplus font-bold text-center hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.1)]"
+      className="box block rounded-lg text-white font-mplus font-bold text-center hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.1)] sm:px-6 sm:py-3 px-4 py-3"
       href={href}
       target="_blank"
       rel="noopener noreferrer"
@@ -29,7 +29,7 @@ const HomePage: React.FC = () => {
         className="min-h-screen bg-cover bg-center py-6 flex flex-col justify-center sm:py-12"
         style={{ backgroundImage: "url('/background.jpg')" }}
       >
-        <div className="relative py-3 sm:max-w-xl sm:mx-auto">
+        <div className="relative py-3 sm:max-w-xl sm:mx-auto max-w-xs mx-auto">
           <ParallaxCard>
             <div className="box-profile ">
               <Image
