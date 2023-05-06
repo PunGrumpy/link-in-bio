@@ -1,7 +1,6 @@
-import React from 'react'
 import Layout from './layout'
 import Image from 'next/image'
-import { ParallaxCard } from './ParallaxCard'
+import { Card } from './card'
 import data from './data.json'
 
 const LinkCard: React.FC<{ href: string; title: string }> = ({
@@ -33,7 +32,7 @@ const HomePage: React.FC = () => {
         style={{ backgroundImage: "url('/background.jpg')" }}
       >
         <div className="relative py-3 sm:max-w-xl sm:mx-auto max-w-xs mx-auto">
-          <ParallaxCard>
+          <Card>
             <div className="box-profile ">
               <Image
                 src="/author_profile.png"
@@ -51,7 +50,7 @@ const HomePage: React.FC = () => {
                 <LinkCard key={index} href={link.href} title={link.title} />
               ))}
             </ul>
-          </ParallaxCard>
+          </Card>
         </div>
       </div>
     </Layout>

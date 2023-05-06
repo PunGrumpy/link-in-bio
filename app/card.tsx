@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useRef, ReactNode, CSSProperties } from 'react'
+import { useRef, ReactNode, CSSProperties } from 'react'
 import { useSpring, animated } from 'react-spring'
 
 const calc = (x: number, y: number) => [
@@ -16,7 +16,7 @@ interface ParallaxCardProps {
   children: ReactNode
 }
 
-export const ParallaxCard: React.FC<ParallaxCardProps> = ({ children }) => {
+export const Card: React.FC<ParallaxCardProps> = ({ children }) => {
   const ref = useRef<any>(null)
   const [{ xys, gradientAngle }, set] = useSpring(() => ({
     xys: [0, 0, 1],
