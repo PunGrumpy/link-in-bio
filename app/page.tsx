@@ -1,6 +1,6 @@
 import Layout from './layout'
 import Image from 'next/image'
-import { Card } from './card'
+import { Card } from './Card'
 import data from './data.json'
 
 const LinkCard: React.FC<{ href: string; title: string }> = ({
