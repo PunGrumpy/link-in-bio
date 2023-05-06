@@ -14,6 +14,9 @@ const LinkCard: React.FC<{ href: string; title: string }> = ({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      style={{
+        cursor: ` url('https://tobiasahlin.com/static/cursors/pointer.png'), auto`
+      }}
     >
       {title}
     </a>
