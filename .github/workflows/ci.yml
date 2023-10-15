@@ -23,7 +23,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: 🚗 Enable Automatically Merge for Dependabot PRs
-        run: gh pr merge --auto --merge ${{ env.PR_URL}}
+        run: gh pr merge --auto ${{ env.PR_URL}}
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
