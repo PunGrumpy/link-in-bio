@@ -10,7 +10,7 @@
     "prettier": "prettier --write --config prettier.config.js \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "dependencies": {
-    "@types/node": "20.8.0",
+    "@types/node": "20.8.6",
     "@types/react": "18.2.28",
     "@types/react-dom": "18.2.13",
     "autoprefixer": "10.4.16",
