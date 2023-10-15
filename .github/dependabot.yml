@@ -5,7 +5,10 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: 'npm'
+    directory: '/'
     schedule:
-      interval: "weekly"
+      timezone: '07:00 UTC'
+      interval: 'weekly'
+    reviewers:
+      - 'PunGrumpy'
