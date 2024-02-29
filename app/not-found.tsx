@@ -8,7 +8,14 @@ const NotFound: React.FC = () => {
     <Link href="/" style={{ cursor: 'pointer' }}>
       <Spline
         scene="https://prod.spline.design/0-eSt6X6XkAemQO9/scene.splinecode"
-        style={{ width: '100%', height: '100vh' }}
+        style={{
+          width: '100%',
+          height: '100vh',
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          zIndex: 1000
+        }}
       />
     </Link>
   )
