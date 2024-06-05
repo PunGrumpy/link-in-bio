@@ -9,7 +9,7 @@
     "lint": "next lint",
     "lint:staged": "lint-staged",
     "prettier": "prettier --write --config prettier.config.js \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@splinetool/runtime": "^1.4.7",
