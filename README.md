@@ -1,6 +1,8 @@
 # Link in BIO
 
-![Link in BIO](./.github/image/thumb.png)
+<!-- ![Link in BIO](./.github/image/thumb.png) -->
+
+![Preview](./.github/image/preview.mp4)
 
 ## 📖 About
 
