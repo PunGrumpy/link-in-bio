@@ -28,12 +28,21 @@ const HomePage: React.FC = () => {
   return (
     <Layout title="Link in Bio" description="Link in Bio for Instagram">
       <div
-        className="min-h-screen bg-cover bg-center py-6 flex flex-col justify-center sm:py-12"
-        // style={{ backgroundImage: "url('/background.jpg')" }}
+        className="min-h-screen relative flex flex-col justify-center items-center bg-cover bg-center"
+        style={{ backgroundImage: "url('/background.jpg')" }}
       >
-        <div className="relative py-3 sm:max-w-xl sm:mx-auto max-w-xs mx-auto">
+        <video
+          autoPlay
+          loop
+          muted
+          className="absolute w-full h-full object-cover"
+        >
+          <source src="/background.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="relative py-3 sm:max-w-xl sm:mx-auto max-w-xs mx-auto z-10">
           <Card>
-            <div className="box-profile ">
+            <div className="box-profile">
               <Image
                 src="/author_profile.png"
                 alt="Author Profile"
@@ -52,21 +61,6 @@ const HomePage: React.FC = () => {
             </ul>
           </Card>
         </div>
-      </div>
-      <div>
-        <iframe
-          src="https://my.spline.design/iphone14wallpaper9copy-d98969f84b43360bb0c164413b743e10/"
-          title="Animating 3D purple blob"
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            border: 'none',
-            zIndex: -1
-          }}
-        />
       </div>
     </Layout>
   )
