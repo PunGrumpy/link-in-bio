@@ -17,17 +17,17 @@ Click the "Fork" button at the top right of this repository page to create a cop
 Clone the repository to your local machine using the following command:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/LINK-IN-BIO.git
+git clone https://github.com/YOUR-USERNAME/link-in-bio.git
 ```
 
 Replace `YOUR-USERNAME` with your GitHub username.
 
-### 3. Edit `app/data.json` File ✏️
+### 3. Edit `app/config/data.json` File ✏️
 
-Navigate to the `app` directory and edit the `data.json` file to customize your links.
+Navigate to the `app/config/` directory and edit the `data.json` file to customize your links.
 
 ```bash
-cd LINK-IN-BIO/app
+cd link-in-bio/app/config
 
 vim data.json # or use any other text editor like nano, code, etc.
 ```
@@ -38,7 +38,7 @@ After editing the `data.json` file, commit and push your changes back to your Gi
 
 ```bash
 # Stage your changes
-git add app/data.json
+git add app/config/data.json
 
 # Commit your changes
 git commit -m "docs: update data.json 📑"

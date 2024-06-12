@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from 'tailwindcss'
+
+const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,9 +9,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mplus: ["'M PLUS Rounded 1c'", 'Verdana', 'sans-serif']
+        mplus: ["'proxima-soft'", 'Verdana', 'sans-serif']
       }
     }
   },
   plugins: []
 }
+export default config
