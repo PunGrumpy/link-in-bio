@@ -1,45 +1,20 @@
 import Layout from './layout'
 import Image from 'next/image'
-import { Card } from './Card'
-import data from './data.json'
+import { Card } from './components/card'
+import { LinkCard } from './components/link-card'
+import { BackgroundVideo } from './components/background-video'
+import data from './config/data.json'
 
-const LinkCard: React.FC<{ href: string; title: string }> = ({
-  href,
-  title
-}) => (
-  <li>
-    <a
-      className="box block rounded-lg text-white font-mplus font-bold text-center hover:bg-[rgba(255,255,255,0.1)] hover:scale-105 focus:bg-[rgba(255,255,255,0.1)] sm:px-6 sm:py-3 px-4 py-3 transition-all duration-300"
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{
-        cursor: ` url('https://tobiasahlin.com/static/cursors/pointer.png'), auto`
-      }}
-    >
-      {title}
-    </a>
-  </li>
-)
-
-const HomePage: React.FC = () => {
+export default function Home() {
   const { links } = data
 
   return (
-    <Layout title="Link in Bio" description="Link in Bio for Instagram">
+    <main>
       <div
         className="min-h-screen relative flex flex-col justify-center items-center bg-cover bg-center"
         style={{ backgroundImage: "url('/background.jpg')" }}
       >
-        <video
-          autoPlay
-          loop
-          muted
-          className="absolute w-full h-full object-cover"
-        >
-          <source src="/background.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <BackgroundVideo />
         <div className="relative py-3 sm:max-w-xl sm:mx-auto max-w-xs mx-auto z-10">
           <Card>
             <div className="box-profile">
@@ -62,8 +37,6 @@ const HomePage: React.FC = () => {
           </Card>
         </div>
       </div>
-    </Layout>
+    </main>
   )
 }
-
-export default HomePage
