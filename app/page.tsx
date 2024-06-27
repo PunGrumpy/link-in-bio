@@ -8,9 +8,6 @@ async function getData(): Promise<Link[]> {
   const response = await fetch('https://bio.pungrumpy.com/api/user', {
     next: { revalidate: 60 }
   })
-  if (!response.ok) {
-    throw new Error('Failed to fetch data')
-  }
 
   const { links } = await response.json()
   return links
