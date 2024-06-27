@@ -1,5 +1,7 @@
 import { Link } from '@/app/lib/link'
 
+export const dynamic = 'force-dynamic'
+
 export async function GET() {
   const links: Link[] = [
     { href: 'https://pungrumpy.com', title: 'Official Website' },
