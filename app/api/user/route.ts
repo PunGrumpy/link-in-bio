@@ -15,5 +15,16 @@ export async function GET() {
     { href: 'https://github.com/PunGrumpy', title: 'GitHub' }
   ]
 
-  return Response.json({ links })
+  return Response.json(
+    {
+      links
+    },
+    {
+      status: 200,
+      headers: {
+        'Cache-Control': 'public, max-age=60, s-maxage=60'
+      },
+      statusText: '👻 Booo!'
+    }
+  )
 }

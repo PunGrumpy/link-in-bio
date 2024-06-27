@@ -14,7 +14,6 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png'
   },
   keywords: ['Link in Bio', 'Instagram', 'Linktree'],
-  themeColor: '#000000',
   authors: {
     name: 'Noppakorn Kaewsalabnil',
     url: 'https://pungrumpy.com'
