@@ -1,12 +1,23 @@
-import Layout from './layout'
 import Image from 'next/image'
 import { Card } from './components/card'
 import { LinkCard } from './components/link-card'
 import { BackgroundVideo } from './components/background-video'
-import data from './config/data.json'
+import { Link } from './lib/link'
 
-export default function Home() {
-  const { links } = data
+async function getData(): Promise<Link[]> {
+  const response = await fetch('https://pungrumpy.com/api/user', {
+    next: { revalidate: 60 }
+  })
+  if (!response.ok) {
+    throw new Error('Failed to fetch data')
+  }
+
+  const { links } = await response.json()
+  return links
+}
+
+export default async function Home() {
+  const data = await getData()
 
   return (
     <main>
@@ -30,8 +41,8 @@ export default function Home() {
               Link in Bio
             </h1>
             <ul className="space-y-4 sm:mb-2">
-              {links.map((link, index) => (
-                <LinkCard key={index} href={link.href} title={link.title} />
+              {data.map((link: Link) => (
+                <LinkCard key={link.href} href={link.href} title={link.title} />
               ))}
             </ul>
           </Card>
