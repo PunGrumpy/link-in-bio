@@ -14,7 +14,7 @@ async function getData(): Promise<Link[]> {
 }
 
 export default async function Home() {
-  // const data = await getData()
+  const data = await getData()
 
   return (
     <main>
@@ -38,11 +38,11 @@ export default async function Home() {
             <h1 className="text-3xl font-mplus font-bold text-center mb-8 text-white">
               Link in Bio
             </h1>
-            {/* <ul className="space-y-4 sm:mb-2">
+            <ul className="space-y-4 sm:mb-2">
               {data.map((link: Link) => (
                 <LinkCard key={link.href} href={link.href} title={link.title} />
               ))}
-            </ul> */}
+            </ul>
           </Card>
         </div>
       </div>
