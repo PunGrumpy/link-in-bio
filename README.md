@@ -22,41 +22,40 @@ git clone https://github.com/YOUR-USERNAME/link-in-bio.git
 
 Replace `YOUR-USERNAME` with your GitHub username.
 
-### 3. Edit `app/config/data.json` File ✏️
+### 3. Edit `app/api/user/route.ts` File ✏️
 
-Navigate to the `app/config/` directory and edit the `data.json` file to customize your links.
+Navigate to the `app/api/user/` directory and edit the `route.ts` file to customize your links.
 
 ```bash
-cd link-in-bio/app/config
+cd link-in-bio/app/api/user
 
-vim data.json # or use any other text editor like nano, code, etc.
+vim route.ts # or use any other text editor like nano, code, etc.
 ```
+
+Update the links array within the `GET` function to include your own links.
 
 ### 4. Commit and Push Your Changes 📤
 
-After editing the `data.json` file, commit and push your changes back to your GitHub repository.
+After editing the `route.ts` file, commit and push your changes back to your GitHub repository.
 
 ```bash
 # Stage your changes
-git add app/config/data.json
+git add app/api/user/route.ts
 
 # Commit your changes
-git commit -m "docs: update data.json 📑"
+git commit -m "docs: update route.ts with custom links 📑"
 
 # Push to your forked repository
 git push origin main
 ```
 
-## Built With 🛠️
+## 🛠️ Built With
 
 - [Next.js](https://nextjs.org/) - A React framework for production.
 - [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework.
 - [Vercel](https://vercel.com/) - A cloud platform for static sites and serverless functions.
 - [React Spring](https://react-spring.dev/) - A spring-physics-based animation library for React.
 
-> [!TIP]
-> Video tag is not supported in Safari browser. You can use [ReactPlayer](https://www.npmjs.com/package/react-player) to embed videos. (In the future I will do)
-
-## License 📄
+## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
