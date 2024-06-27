@@ -35,6 +35,7 @@ export default async function Home() {
                 className="w-32 h-32 mx-auto mb-4 rounded-full object-cover"
                 width={128}
                 height={128}
+                priority={true}
               />
             </div>
             <h1 className="text-3xl font-mplus font-bold text-center mb-8 text-white">
