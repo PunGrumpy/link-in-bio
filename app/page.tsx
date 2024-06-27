@@ -5,7 +5,7 @@ import { BackgroundVideo } from './components/background-video'
 import { Link } from './lib/link'
 
 async function getData(): Promise<Link[]> {
-  const response = await fetch('https://pungrumpy.com/api/user', {
+  const response = await fetch('https://bio.pungrumpy.com/api/user', {
     next: { revalidate: 60 }
   })
   if (!response.ok) {
