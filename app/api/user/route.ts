@@ -26,7 +26,7 @@ export async function GET() {
       headers: {
         'Cache-Control': 'public, max-age=60, s-maxage=60'
       },
-      statusText: '👻 Booo!'
+      statusText: 'Booo!'
     }
   )
 }
