@@ -17,27 +17,34 @@ interface ParallaxCardProps {
 }
 
 export const Card: React.FC<ParallaxCardProps> = ({ children }) => {
-  const ref = useRef<any>(null)
+  const ref = useRef<HTMLDivElement>(null)
   const [{ xys, gradientAngle }, set] = useSpring(() => ({
     xys: [0, 0, 1],
     gradientAngle: 0,
     config: { mass: 5, tension: 350, friction: 40 }
   }))
 
+  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
+    const { clientX: x, clientY: y } = event
+    set({
+      xys: calc(x, y),
+      gradientAngle:
+        (Math.atan2(y - window.innerHeight / 2, x - window.innerWidth / 2) *
+          180) /
+        Math.PI
+    })
+  }
+
+  const handleMouseLeave = () => {
+    set({ xys: [0, 0, 1], gradientAngle: 0 })
+  }
+
   return (
     <animated.div
       ref={ref}
       className="relative px-16 py-10 bg-[rgba(0,0,0,0.6)] bg-opacity-60 backdrop-blur-md shadow-lg sm:rounded-3xl sm:p-20 rounded-xl"
-      onMouseMove={({ clientX: x, clientY: y }) =>
-        set({
-          xys: calc(x, y),
-          gradientAngle:
-            (Math.atan2(y - window.innerHeight / 2, x - window.innerWidth / 2) *
-              180) /
-            Math.PI
-        })
-      }
-      onMouseLeave={() => set({ xys: [0, 0, 1], gradientAngle: 0 })}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
       style={
         {
           transform: xys.to(trans),
