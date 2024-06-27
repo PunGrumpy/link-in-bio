@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { Card } from './components/card'
 import { LinkCard } from './components/link-card'
-import { BackgroundVideo } from './components/background-video'
 import { Link } from './lib/link'
 
 async function getData(): Promise<Link[]> {
@@ -22,7 +21,6 @@ export default async function Home() {
         className="min-h-screen relative flex flex-col justify-center items-center bg-cover bg-center"
         style={{ backgroundImage: "url('/background.jpg')" }}
       >
-        <BackgroundVideo />
         <div className="relative py-3 sm:max-w-xl sm:mx-auto max-w-xs mx-auto z-10">
           <Card>
             <div className="box-profile">
