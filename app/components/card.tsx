@@ -1,5 +1,6 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import { useRef, ReactNode, CSSProperties } from 'react'
 import { useSpring, animated } from 'react-spring'
 
@@ -40,20 +41,26 @@ export const Card: React.FC<ParallaxCardProps> = ({ children }) => {
   }
 
   return (
-    <animated.div
-      ref={ref}
-      className="relative px-16 py-10 bg-[rgba(0,0,0,0.6)] bg-opacity-60 backdrop-blur-md shadow-lg sm:rounded-3xl sm:p-20 rounded-xl"
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      style={
-        {
-          transform: springs.xys.to(trans),
-          '--gradient-angle': springs.gradientAngle.to(a => `${a}deg`),
-          border: `0.5px solid hsl(0, 0%, 25%)`
-        } as unknown as CSSProperties
-      }
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
     >
-      {children}
-    </animated.div>
+      <animated.div
+        ref={ref}
+        className="relative px-16 py-10 bg-[rgba(0,0,0,0.6)] bg-opacity-60 backdrop-blur-md shadow-lg sm:rounded-3xl sm:p-20 rounded-xl"
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        style={
+          {
+            transform: springs.xys.to(trans),
+            '--gradient-angle': springs.gradientAngle.to(a => `${a}deg`),
+            border: `0.5px solid hsl(0, 0%, 25%)`
+          } as unknown as CSSProperties
+        }
+      >
+        {children}
+      </animated.div>
+    </motion.div>
   )
 }
