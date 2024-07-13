@@ -35,7 +35,8 @@ export const metadata: Metadata = {
     url: 'https://bio.pungrumpy.com',
     images: '/background.jpg',
     countryName: 'Thailand'
-  }
+  },
+  robots: 'index, follow'
 }
 
 export default function RootLayout({
