@@ -5,6 +5,9 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_VERCEL_URL || 'https://bio.pungrumpy.com'
+  ),
   title: 'Link in Bio',
   description:
     'Link in Bio is a simple, customizable, and easy-to-use link-in-bio tool for creators.',

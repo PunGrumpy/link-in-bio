@@ -3,17 +3,21 @@ import { Card } from './components/card'
 import { LinkCard } from './components/link-card'
 import { Link } from './lib/link'
 
-async function getData(): Promise<Link[]> {
+async function getLinks(): Promise<Link[]> {
   const response = await fetch('https://bio.pungrumpy.com/api/user', {
     next: { revalidate: 60 }
   })
+
+  if (!response.ok) {
+    throw new Error('Failed to fetch links')
+  }
 
   const { links } = await response.json()
   return links
 }
 
 export default async function Home() {
-  const data = await getData()
+  const data = await getLinks()
 
   return (
     <main>
