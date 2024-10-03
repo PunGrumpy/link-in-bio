@@ -18,33 +18,35 @@ export const metadata: Metadata = {
   metadataBase: process.env.NEXT_PUBLIC_METADATA_BASE
     ? new URL(`${process.env.NEXT_PUBLIC_METADATA_BASE}`)
     : new URL('http://localhost:3000'),
-  title: 'Next.js 15 with Turborepo and shadcn/ui',
-  description:
-    'A modern web application using Next.js 15, Turborepo, and shadcn/ui',
+  title: 'Link In Bio',
+  description: 'A easy-to-click link in bio for your social media profile.',
   robots: 'follow, index',
+  icons: {
+    icon: '/metadata/favicon.ico',
+    shortcut: '/metadata//favicon.ico',
+    apple: '/metadata/apple-touch-icon.png'
+  },
   openGraph: {
-    title: 'Next.js 15 with Turborepo and shadcn/ui',
-    description:
-      'A modern web application using Next.js 15, Turborepo, and shadcn/ui',
+    title: 'Link In Bio',
+    description: 'A easy-to-click link in bio for your social media profile.',
     type: 'website',
     locale: 'en_US',
     countryName: 'Thailand',
     images: [
       {
         url: '/metadata/og-image.png',
-        alt: 'Next.js 15 with Turborepo and shadcn/ui'
+        alt: 'Link In Bio'
       }
     ]
   },
   twitter: {
-    title: 'Next.js 15 with Turborepo and shadcn/ui',
-    description:
-      'A modern web application using Next.js 15, Turborepo, and shadcn/ui',
+    title: 'Link In Bio',
+    description: 'A easy-to-click link in bio for your social media profile.',
     card: 'summary_large_image',
     images: [
       {
         url: '/metadata/og-image.png',
-        alt: 'Next.js 15 with Turborepo and shadcn/ui'
+        alt: 'Link In Bio'
       }
     ]
   }
