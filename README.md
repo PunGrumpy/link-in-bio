@@ -1,78 +1,102 @@
-# ⚡ Turborepo Next Design
+# 🔗 Link in Bio
 
-This is an **unofficial** starter for Turborepo, a monorepo tool that makes it easy to build, test, and deploy multiple packages and apps.
+A stylish and customizable "Link in Bio" page built with Next.js, Tailwind CSS, and Framer Motion.
 
-## 🚀 Using this Example
+## 🌟 Features
 
-Run the following command:
+- 📱 Responsive design
+- 🎨 Customizable profile information
+- 🔗 Multiple link support
+- ✨ Smooth animations with Framer Motion
+- 🖼️ Custom background image support
+- 🌓 Dark mode compatible (when used with shadcn/ui theming)
 
-```sh
-npx create-turbo@latest
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or later)
+- pnpm (v6 or later)
+
+### Installation
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/PunGrumpy/link-in-bio.git
+   cd link-in-bio
+   ```
+
+2. Install dependencies:
+
+   ```sh
+   pnpm install
+   ```
+
+3. Start the development server:
+
+   ```sh
+   pnpm dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+## 🛠️ Usage
+
+1. Edit the `profile` object in `app/page.tsx` to customize your information:
+
+   ```typescript
+   const profile = {
+     name: 'Your Name',
+     avatarSrc: 'path/to/your/avatar.jpg',
+     description: 'Your bio description here...',
+     links: [
+       {
+         icon: <YourIconComponent />,
+         text: 'Link Title',
+         subtext: 'Link Description',
+         href: 'https://your-link-url.com'
+       },
+       // Add more links as needed
+     ]
+   }
+   ```
+
+2. Replace the background image by updating the `bg-[url('/background.avif')]` class in `app/page.tsx` with your preferred image path.
+
+3. Customize colors and styles by modifying the Tailwind classes in the components.
+
+## 📦 Project Structure
+
+- [`apps/www/app/page.tsx`](/apps/www/app/page.tsx): Main page component and profile data
+- [`@repo/ui/components/link-in-bio.tsx`](/packages/ui/src/components/link-in-bio.tsx): Reusable LinkInBio component
+- [`apps/www/public/`](/apps/www/public/): Static assets (including background image)
+
+## 🎨 Customization
+
+- To change the accent color, replace instances of `lime-500` with your preferred color.
+- Adjust animations by modifying the Framer Motion variants in `LinkInBio.tsx`.
+- For more advanced theming, refer to the [shadcn/ui documentation](https://ui.shadcn.com/docs/theming).
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 🙏 Acknowledgements
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Lucide Icons](https://lucide.dev/)
+
 ```
 
-## 📦 What's Inside?
+This README provides a comprehensive overview of your Link in Bio project, including its features, setup instructions, usage guidelines, and customization options. It's tailored to the specific project you've created, highlighting its key components and technologies.
 
-This Turborepo includes the following packages and apps:
-
-### 🏠 Apps and Packages
-
-- `apps/www`: a [Next.js 15](https://nextjs.org/) app using the latest features.
-- `@repo/ui`: a shared component library using [shadcn/ui](https://shadcn.dev/), utilized by `apps/www`.
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`).
-- `@repo/typescript-config`: shared `tsconfig.json` files used throughout the monorepo.
-
-All packages and apps are 100% [TypeScript](https://www.typescriptlang.org/).
-
-### 🛠️ Utilities
-
-This Turborepo comes pre-configured with some useful tools:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking.
-- [ESLint](https://eslint.org/) for code linting.
-- [Prettier](https://prettier.io) for code formatting.
-
-### 🔨 Build
-
-To build all apps and packages, run the following command:
-
-```sh
-cd turbo-next-design
-pnpm build
+Feel free to adjust any details or add more specific information about your project as needed. You may also want to include screenshots or a live demo link if available.
 ```
-
-### 🧑‍💻 Develop
-
-To develop all apps and packages, run the following command:
-
-```sh
-cd turbo-next-design
-pnpm dev
-```
-
-### ☁️ Remote Caching
-
-Turborepo supports [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, speeding up builds for your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching, you'll need a [Vercel account](https://vercel.com/signup). Once you have an account, authenticate with:
-
-```sh
-cd turbo-next-design
-npx turbo login
-```
-
-Then link your project to the remote cache:
-
-```sh
-npx turbo link
-```
-
-## 🔗 Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
