@@ -15,6 +15,9 @@ const geistMono = localFont({
 })
 
 export const metadata: Metadata = {
+  metadataBase: process.env.NEXT_PUBLIC_METADATA_BASE
+    ? new URL(`${process.env.NEXT_PUBLIC_METADATA_BASE}`)
+    : new URL('http://localhost:3000'),
   title: 'Next.js 15 with Turborepo and shadcn/ui',
   description:
     'A modern web application using Next.js 15, Turborepo, and shadcn/ui',

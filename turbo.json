@@ -5,12 +5,14 @@
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "env": ["NEXT_PUBLIC_METADATA_BASE"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
     "lint": {
       "dependsOn": ["^lint"]
     },
     "dev": {
+      "env": ["NEXT_PUBLIC_METADATA_BASE"],
       "cache": false,
       "persistent": true
     }
