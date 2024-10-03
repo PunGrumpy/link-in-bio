@@ -1,3 +1,4 @@
+import { DotFilledIcon } from '@radix-ui/react-icons'
 import {
   Avatar,
   AvatarFallback,
@@ -5,7 +6,6 @@ import {
 } from '@repo/ui/components/ui/avatar'
 import { Card, CardContent } from '@repo/ui/components/ui/card'
 import { motion } from 'framer-motion'
-import { NewReleasesIcon } from 'hugeicons-react'
 import { ExternalLink } from 'lucide-react'
 import React from 'react'
 
@@ -68,7 +68,7 @@ export function LinkInBio({
       animate="visible"
       className="w-full max-w-2xl"
     >
-      <Card className="from-card/90 to-card/60 overflow-hidden rounded-3xl border-none bg-gradient-to-br shadow-lg backdrop-blur-sm">
+      <Card className="from-card/90 to-card-foreground/10 overflow-hidden rounded-3xl border-none bg-gradient-to-br shadow-lg backdrop-blur-sm">
         <CardContent className="p-8">
           <motion.div
             variants={itemVariants}
@@ -83,12 +83,15 @@ export function LinkInBio({
                   .join('')}
               </AvatarFallback>
             </Avatar>
-            <h1 className="mb-3 flex items-center gap-2 text-3xl font-bold">
+            <h1 className="mb-3 flex items-center gap-4 text-3xl font-bold">
               {name}
-              <NewReleasesIcon
-                className="size-7 text-lime-500"
-                aria-label="Verified"
-              />
+              <div className="relative inline-flex">
+                <DotFilledIcon
+                  className="z-10 size-5 cursor-pointer text-lime-500"
+                  aria-label="Toggle theme"
+                />
+                <span className="absolute inset-0 animate-ping rounded-full bg-lime-400 opacity-75"></span>
+              </div>
             </h1>
             <p className="text-muted-foreground mb-6 max-w-lg text-center text-base leading-relaxed">
               {description}
