@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-[url('/background.avif')] bg-cover bg-center bg-no-repeat p-4">
       <motion.div
-        className="absolute inset-0 bg-black/50"
+        className="absolute inset-0 bg-black/15"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
