@@ -74,23 +74,23 @@ export function LinkInBio({
             variants={itemVariants}
             className="mb-10 flex flex-col items-center"
           >
-            <Avatar className="mb-6 size-32 border-2 border-lime-500 ring-4 ring-lime-500/50 transition-all duration-300 hover:scale-105 hover:ring-lime-400">
+            <Avatar className="mb-6 size-32 border-2 border-purple-500 ring-4 ring-purple-500/50 transition-all duration-300 hover:scale-105 hover:ring-purple-400">
               <AvatarImage src={avatarSrc} alt={name} />
-              <AvatarFallback className="bg-lime-500/10 text-2xl text-lime-500">
+              <AvatarFallback className="bg-purple-500/10 text-2xl text-purple-700 dark:text-purple-300">
                 {name
                   .split(' ')
                   .map(n => n[0])
                   .join('')}
               </AvatarFallback>
             </Avatar>
-            <h1 className="mb-3 flex items-center gap-4 text-3xl font-bold">
+            <h1 className="text-foreground mb-3 flex items-center gap-4 text-3xl font-bold">
               {name}
               <div className="relative inline-flex">
                 <DotFilledIcon
-                  className="z-10 size-5 cursor-pointer text-lime-500"
-                  aria-label="Toggle theme"
+                  className="z-10 size-5 text-purple-500"
+                  aria-label="Online status"
                 />
-                <span className="absolute inset-0 animate-ping rounded-full bg-lime-400 opacity-75"></span>
+                <span className="absolute inset-0 animate-ping rounded-full bg-purple-400 opacity-75"></span>
               </div>
             </h1>
             <p className="text-muted-foreground mb-6 max-w-lg text-center text-base leading-relaxed">
@@ -110,18 +110,20 @@ export function LinkInBio({
                 whileTap={{ scale: 0.98 }}
               >
                 <div className="flex items-center">
-                  <span className="bg-background group-hover:text-background mr-5 flex size-12 items-center justify-center rounded-md text-lime-500 transition-colors group-hover:bg-lime-500">
+                  <span className="bg-background group-hover:text-background mr-5 flex size-12 items-center justify-center rounded-md text-purple-600 transition-colors group-hover:bg-purple-500">
                     {renderIcon(link.icon)}
                   </span>
                   <div>
-                    <div className="text-base font-semibold">{link.text}</div>
+                    <div className="text-foreground text-base font-semibold">
+                      {link.text}
+                    </div>
                     <div className="text-muted-foreground text-sm">
                       {link.subtext}
                     </div>
                   </div>
                 </div>
                 <ExternalLink
-                  className="text-muted-foreground/50 size-5 transition-colors group-hover:text-lime-500"
+                  className="text-muted-foreground/50 size-5 transition-colors group-hover:text-purple-500"
                   aria-hidden="true"
                 />
               </motion.a>
