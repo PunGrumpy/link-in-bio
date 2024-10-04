@@ -87,10 +87,10 @@ export function LinkInBio({
               {name}
               <div className="relative inline-flex">
                 <DotFilledIcon
-                  className="z-10 size-5 text-purple-500"
+                  className="z-10 size-5 text-green-500"
                   aria-label="Online status"
                 />
-                <span className="absolute inset-0 animate-ping rounded-full bg-purple-400 opacity-75"></span>
+                <div className="absolute inset-0 animate-ping rounded-full bg-green-500/50" />
               </div>
             </h1>
             <p className="text-muted-foreground mb-6 max-w-lg text-center text-base leading-relaxed">
