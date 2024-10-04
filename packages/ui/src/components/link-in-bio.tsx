@@ -85,13 +85,6 @@ export function LinkInBio({
             </Avatar>
             <h1 className="text-foreground mb-3 flex items-center gap-4 text-3xl font-bold">
               {name}
-              <div className="relative inline-flex">
-                <DotFilledIcon
-                  className="z-10 size-5 text-green-500"
-                  aria-label="Online status"
-                />
-                <div className="absolute inset-0 animate-ping rounded-full bg-green-500/50" />
-              </div>
             </h1>
             <p className="text-muted-foreground mb-6 max-w-lg text-center text-base leading-relaxed">
               {description}
