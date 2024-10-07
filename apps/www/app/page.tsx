@@ -2,8 +2,7 @@
 
 import { LinkInBio } from '@repo/ui/components/link-in-bio'
 import { motion } from 'framer-motion'
-import { GithubIcon, InstagramIcon } from 'hugeicons-react'
-import { LinkedinIcon } from 'lucide-react'
+import { GithubIcon, InstagramIcon, Linkedin02Icon } from 'hugeicons-react'
 
 const profile = {
   name: 'Noppakorn Kaewsalabnil',
@@ -18,7 +17,7 @@ const profile = {
       href: 'https://github.com/PunGrumpy'
     },
     {
-      icon: <LinkedinIcon />,
+      icon: <Linkedin02Icon />,
       text: 'Connect with me',
       subtext: 'More than happy to connect on LinkedIn',
       href: 'https://th.linkedin.com/in/noppakorn-kaewsalabnil'
