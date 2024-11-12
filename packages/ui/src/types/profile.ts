@@ -15,7 +15,10 @@ export interface ProfileInfo {
   title: string
   avatarSrc: string
   location: string
-  email: string
+  website: {
+    text: string
+    href: string
+  }
 }
 
 export interface LinkInBioProps extends ProfileInfo {

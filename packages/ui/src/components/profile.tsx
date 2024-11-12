@@ -4,14 +4,14 @@ import {
   AvatarImage
 } from '@repo/ui/components/ui/avatar'
 import { ProfileInfo } from '@repo/ui/types/profile'
-import { Mail, MapPin } from 'lucide-react'
+import { Globe, MapPin } from 'lucide-react'
 
 export function Profile({
   name,
   title,
   avatarSrc,
   location,
-  email
+  website
 }: ProfileInfo) {
   return (
     <div className="relative mb-16">
@@ -45,10 +45,13 @@ export function Profile({
               <MapPin className="size-3.5" strokeWidth={1.5} />
               {location}
             </span>
-            <span className="flex items-center gap-1.5">
-              <Mail className="size-3.5" strokeWidth={1.5} />
-              {email}
-            </span>
+            <a
+              href={website.href}
+              className="hover:text-primary flex items-center gap-1.5"
+            >
+              <Globe className="size-3.5" strokeWidth={1.5} />
+              {website.text}
+            </a>
           </div>
         </div>
       </div>

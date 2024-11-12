@@ -4,7 +4,10 @@ interface Profile {
   name: string
   title: string
   location: string
-  email: string
+  website: {
+    text: string
+    href: string
+  }
   avatarSrc: string
   links: {
     icon: JSX.Element
@@ -21,7 +24,10 @@ export const profile: Profile = {
   name: 'Noppakorn Kaewsalabnil',
   title: 'Computer Science Student',
   location: 'Bangkok, Thailand',
-  email: 'your.email@example.com',
+  website: {
+    text: 'https://pungrumpy.com',
+    href: 'https://pungrumpy.com'
+  },
   avatarSrc: 'https://avatars.githubusercontent.com/u/108584943?v=4',
   links: [
     {
