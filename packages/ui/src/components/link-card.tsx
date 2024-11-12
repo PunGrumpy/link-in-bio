@@ -1,6 +1,10 @@
+'use client'
+
+import { cardVariants } from '@repo/ui/animations/variants'
 import { Badge } from '@repo/ui/components/ui/badge'
 import { cn } from '@repo/ui/lib/utils'
 import { LinkItem } from '@repo/ui/types/profile'
+import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
 
 interface LinkCardProps {
@@ -19,16 +23,22 @@ export function LinkCard({
   const { featured, icon, text, subtext, href, skills } = link
 
   return (
-    <a
+    <motion.a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      onMouseEnter={onHoverStart}
-      onMouseLeave={onHoverEnd}
+      variants={cardVariants}
+      initial="hidden"
+      animate="visible"
+      whileHover="hover"
+      whileTap="tap"
+      onHoverStart={onHoverStart}
+      onHoverEnd={onHoverEnd}
       className={cn(
         'group relative overflow-hidden rounded-xl border transition-all duration-300',
         'border-border bg-foreground/[0.02]',
         'hover:border-foreground/[0.12] hover:bg-foreground/[0.04]',
+        'touch-none active:scale-[0.98]',
         featured && 'border-sky-500/20'
       )}
     >
@@ -87,6 +97,6 @@ export function LinkCard({
           Featured
         </Badge>
       )}
-    </a>
+    </motion.a>
   )
 }

@@ -10,7 +10,8 @@
     "./lib/*": "./src/lib/*.ts",
     "./hooks/*": "./src/hooks/*.ts",
     "./components/*": "./src/components/*.tsx",
-    "./types/*": "./src/types/*.ts"
+    "./types/*": "./src/types/*.ts",
+    "./animations/*": "./src/animations/*.ts"
   },
   "scripts": {
     "generate:component": "turbo gen react-component",

@@ -1,11 +1,13 @@
 'use client'
 
+import { pageVariants } from '@repo/ui/animations/variants'
 import { CategoryFilter } from '@repo/ui/components/category-filter'
 import { LinkCard } from '@repo/ui/components/link-card'
 import { Profile } from '@repo/ui/components/profile'
 import { Card } from '@repo/ui/components/ui/card'
 import { Skeleton } from '@repo/ui/components/ui/skeleton'
 import { CategoryName, LinkInBioProps } from '@repo/ui/types/profile'
+import { motion } from 'framer-motion'
 import { useState } from 'react'
 
 function LinkCardSkeleton() {
@@ -44,7 +46,12 @@ export function LinkInBio(props: LinkInBioProps) {
       : props.links.filter(link => link.category === selectedCategory)
 
   return (
-    <div className="mx-auto w-full max-w-2xl px-4 py-12">
+    <motion.div
+      className="mx-auto w-full max-w-2xl px-4 py-12"
+      initial="hidden"
+      animate="visible"
+      variants={pageVariants}
+    >
       <Card className="bg-background/50 relative overflow-hidden border-none p-8 shadow-2xl backdrop-blur-lg">
         <div className="pointer-events-none absolute inset-0 -z-10">
           <div className="from-foreground/[0.03] absolute inset-0 bg-gradient-to-b to-transparent" />
@@ -77,7 +84,7 @@ export function LinkInBio(props: LinkInBioProps) {
               ))}
         </div>
       </Card>
-    </div>
+    </motion.div>
   )
 }
 
