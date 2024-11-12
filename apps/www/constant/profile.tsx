@@ -1,4 +1,4 @@
-import { GithubIcon, InstagramIcon, Linkedin02Icon } from 'hugeicons-react'
+import { Calendar03Icon, GithubIcon, Linkedin02Icon } from 'hugeicons-react'
 
 interface Profile {
   name: string
@@ -48,12 +48,11 @@ export const profile: Profile = {
       skills: ['Software Development', 'DevOps', 'Cloud Computing']
     },
     {
-      icon: <InstagramIcon className="size-6" />,
-      text: 'Photography Portfolio',
-      subtext: 'Travel and lifestyle photography',
-      href: 'https://www.instagram.com/pungrumpy_p',
-      category: 'Social',
-      skills: ['Photography', 'Lightroom']
+      icon: <Calendar03Icon className="size-6" />,
+      text: 'Schedule a Meeting',
+      subtext: 'Book a time to connect with me',
+      href: 'https://cal.com/pungrumpy',
+      category: 'Work'
     }
   ]
 }
