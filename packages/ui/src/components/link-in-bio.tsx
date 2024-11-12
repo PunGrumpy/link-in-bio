@@ -47,7 +47,7 @@ export function LinkInBio(props: LinkInBioProps) {
 
   return (
     <motion.div
-      className="mx-auto w-full max-w-2xl px-4 py-12"
+      className="mx-auto size-full max-w-xl px-4 py-12"
       initial="hidden"
       animate="visible"
       variants={pageVariants}
