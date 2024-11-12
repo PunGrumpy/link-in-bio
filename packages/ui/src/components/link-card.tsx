@@ -66,7 +66,11 @@ export function LinkCard({
                   <Badge
                     key={skill}
                     variant="outline"
-                    className="border-foreground/10 text-foreground/60 px-1.5 py-0 text-[10px]"
+                    className={cn(
+                      'border-foreground/10 text-foreground/60',
+                      'px-1.5 py-0 text-[10px]',
+                      'hidden sm:inline-flex'
+                    )}
                   >
                     {skill}
                   </Badge>
@@ -79,6 +83,7 @@ export function LinkCard({
         <div
           className={cn(
             'transition-transform duration-300',
+            'hidden sm:block',
             isHovered ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'
           )}
         >
@@ -92,7 +97,12 @@ export function LinkCard({
       {featured && (
         <Badge
           variant="outline"
-          className="absolute right-4 top-4 border-sky-500/20 bg-sky-500/5 text-[12px] font-light tracking-wide text-sky-500/80"
+          className={cn(
+            'absolute border-sky-500/20 bg-sky-500/5',
+            'text-[12px] font-light tracking-wide text-sky-500/80',
+            'right-2 top-2 sm:right-4 sm:top-4',
+            'max-w-[90px] truncate sm:max-w-none'
+          )}
         >
           Featured
         </Badge>
