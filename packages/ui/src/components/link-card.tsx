@@ -1,0 +1,92 @@
+import { Badge } from '@repo/ui/components/ui/badge'
+import { cn } from '@repo/ui/lib/utils'
+import { LinkItem } from '@repo/ui/types/profile'
+import { ArrowUpRight } from 'lucide-react'
+
+interface LinkCardProps {
+  link: LinkItem
+  isHovered: boolean
+  onHoverStart: () => void
+  onHoverEnd: () => void
+}
+
+export function LinkCard({
+  link,
+  isHovered,
+  onHoverStart,
+  onHoverEnd
+}: LinkCardProps) {
+  const { featured, icon, text, subtext, href, skills } = link
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      onMouseEnter={onHoverStart}
+      onMouseLeave={onHoverEnd}
+      className={cn(
+        'group relative overflow-hidden rounded-xl border transition-all duration-300',
+        'border-border bg-foreground/[0.02]',
+        'hover:border-foreground/[0.12] hover:bg-foreground/[0.04]',
+        featured && 'border-sky-500/20'
+      )}
+    >
+      <div className="flex items-center justify-between gap-4 p-4">
+        <div className="flex items-center gap-4">
+          <div
+            className={cn(
+              'flex size-10 items-center justify-center rounded-lg transition-all duration-300',
+              'bg-foreground/[0.02] border-foreground/[0.08] border',
+              'group-hover:border-foreground/[0.12] group-hover:bg-foreground/[0.04]'
+            )}
+          >
+            {icon}
+          </div>
+          <div>
+            <p className="text-foreground/90 font-light tracking-wide">
+              {text}
+            </p>
+            <p className="text-foreground/40 mt-0.5 text-[13px] font-light tracking-wide">
+              {subtext}
+            </p>
+            {skills && (
+              <div className="mt-2 flex flex-wrap gap-1">
+                {skills.map(skill => (
+                  <Badge
+                    key={skill}
+                    variant="outline"
+                    className="border-foreground/10 text-foreground/60 px-1.5 py-0 text-[10px]"
+                  >
+                    {skill}
+                  </Badge>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+
+        <div
+          className={cn(
+            'transition-transform duration-300',
+            isHovered ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'
+          )}
+        >
+          <ArrowUpRight
+            className="text-foreground/80 size-5"
+            strokeWidth={1.5}
+          />
+        </div>
+      </div>
+
+      {featured && (
+        <Badge
+          variant="outline"
+          className="absolute right-4 top-4 border-sky-500/20 bg-sky-500/5 text-[12px] font-light tracking-wide text-sky-500/80"
+        >
+          Featured
+        </Badge>
+      )}
+    </a>
+  )
+}

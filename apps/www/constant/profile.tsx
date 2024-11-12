@@ -1,0 +1,53 @@
+import { GithubIcon, InstagramIcon, Linkedin02Icon } from 'hugeicons-react'
+
+interface Profile {
+  name: string
+  title: string
+  location: string
+  email: string
+  avatarSrc: string
+  links: {
+    icon: JSX.Element
+    text: string
+    subtext: string
+    href: string
+    category: 'Projects' | 'Work' | 'Social'
+    featured?: boolean
+    skills?: string[]
+  }[]
+}
+
+export const profile: Profile = {
+  name: 'Noppakorn Kaewsalabnil',
+  title: 'Computer Science Student',
+  location: 'Bangkok, Thailand',
+  email: 'your.email@example.com',
+  avatarSrc: 'https://avatars.githubusercontent.com/u/108584943?v=4',
+  links: [
+    {
+      icon: <GithubIcon className="size-6" />,
+      text: 'Open Source Projects',
+      subtext: 'Check out my contributions and repositories',
+      href: 'https://github.com/PunGrumpy',
+      category: 'Projects',
+      featured: true,
+      skills: ['TypeScript', 'React', 'Next.js']
+    },
+    {
+      icon: <Linkedin02Icon className="size-6" />,
+      text: 'Professional Network',
+      subtext: 'Connect with me on LinkedIn',
+      href: 'https://th.linkedin.com/in/noppakorn-kaewsalabnil',
+      category: 'Work',
+      skills: ['Software Development', 'DevOps', 'Cloud Computing']
+    },
+    {
+      icon: <InstagramIcon className="size-6" />,
+      text: 'Photography Portfolio',
+      subtext: 'Travel and lifestyle photography',
+      href: 'https://www.instagram.com/pungrumpy_p',
+      category: 'Social',
+      skills: ['Photography', 'Lightroom']
+    }
+  ]
+}

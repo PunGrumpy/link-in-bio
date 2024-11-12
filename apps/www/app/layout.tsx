@@ -1,6 +1,7 @@
 import '@repo/ui/globals.css'
 
 import { ThemeProvider } from '@repo/ui/components/theme-provider'
+import { TooltipProvider } from '@repo/ui/components/ui/tooltip'
 import { cn } from '@repo/ui/lib/utils'
 import type { Metadata, Viewport } from 'next'
 import localFont from 'next/font/local'
@@ -79,7 +80,9 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
           enableSystem
           disableTransitionOnChange
         >
-          <div className="relative flex min-h-screen flex-col">{children}</div>
+          <div className="relative flex min-h-screen flex-col">
+            <TooltipProvider>{children}</TooltipProvider>
+          </div>
         </ThemeProvider>
       </body>
     </html>
