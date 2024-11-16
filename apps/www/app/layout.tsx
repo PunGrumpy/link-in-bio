@@ -64,23 +64,64 @@ interface RootLayoutProps {
   children: React.ReactNode
 }
 
-export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(
-          geistSans.variable,
-          geistMono.variable,
-          'from-background to-secondary/20 min-h-screen bg-gradient-to-br font-sans antialiased'
-        )}
-      >
+    <html
+      lang="en"
+      className={cn(geistSans.variable, geistMono.variable)}
+      suppressHydrationWarning
+    >
+      <body className="antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
-          enableSystem
+          enableSystem={false}
           disableTransitionOnChange
         >
-          <TooltipProvider>{children}</TooltipProvider>
+          <TooltipProvider>
+            {/* NextJS App Shell */}
+            <div className="fixed inset-0 flex items-center justify-center">
+              <div
+                className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))]"
+                style={{
+                  background: `
+                    radial-gradient(circle at 50% 50%,
+                      rgba(0, 0, 0, 0) 0%,
+                      rgba(0, 0, 0, 0.5) 100%
+                    ),
+                    linear-gradient(180deg,
+                      rgba(0, 0, 0, 0.8) 0%,
+                      rgba(0, 0, 0, 1) 100%
+                    )
+                  `
+                }}
+              />
+
+              {/* Futuristic Grid Overlay */}
+              <div
+                className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiMxMTExMTEiIGQ9Ik0wIDBoNjB2NjBIMHoiLz48cGF0aCBkPSJNMzAgMzBoMnYyaC0yeiIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjEpIi8+PC9nPjwvc3ZnPg==')]"
+                style={{
+                  maskImage:
+                    'radial-gradient(circle at center, black, transparent)',
+                  WebkitMaskImage:
+                    'radial-gradient(circle at center, black, transparent)'
+                }}
+              />
+
+              {/* Animated Border Effect */}
+              <div className="absolute inset-0">
+                <div className="animate-border-glow absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
+                <div className="animate-border-glow absolute inset-y-0 right-0 w-px bg-gradient-to-b from-transparent via-purple-500 to-transparent" />
+                <div className="animate-border-glow absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
+                <div className="animate-border-glow absolute inset-y-0 left-0 w-px bg-gradient-to-b from-transparent via-purple-500 to-transparent" />
+              </div>
+
+              {/* Content */}
+              <main className="relative h-screen w-screen overflow-hidden">
+                {children}
+              </main>
+            </div>
+          </TooltipProvider>
         </ThemeProvider>
       </body>
     </html>
