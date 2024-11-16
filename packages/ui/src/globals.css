@@ -4,29 +4,41 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
 
-    --card: 0 0% 3%;
-    --card-foreground: 0 0% 100%;
+    --primary: 142 71% 45%;
+    --primary-foreground: 144 100% 11%;
 
-    --border: 215 25% 27%;
-    --input: 215 25% 27%;
+    --secondary: 217 19% 27%;
+    --secondary-foreground: 210 40% 98%;
 
-    --primary: 217 91% 60%;
-    --primary-foreground: 0 0% 100%;
+    --accent: 316 70% 43%;
+    --accent-foreground: 210 40% 98%;
 
-    --secondary: 280 87% 65%;
-    --secondary-foreground: 0 0% 100%;
+    --muted: 223 47% 11%;
+    --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 316 70% 50%;
-    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --border: 217 19% 27%;
+    --input: 217 19% 27%;
+    --ring: 224 71% 4%;
 
-    --ring: 217 91% 60%;
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
     --radius: 0.75rem;
+
+    /* Modern gradient colors */
+    --gradient-1: 142 71% 45%; /* Vibrant Green */
+    --gradient-2: 199 89% 48%; /* Electric Blue */
+    --gradient-3: 316 70% 43%; /* Modern Purple */
+    --gradient-4: 262 83% 58%; /* Deep Purple */
   }
 }
 
@@ -34,153 +46,63 @@
   * {
     @apply border-border;
   }
-
   html {
-    @apply antialiased;
-    color-scheme: dark;
+    @apply scroll-smooth;
   }
-
   body {
     @apply bg-background text-foreground;
-    font-feature-settings:
-      'rlig' 1,
-      'calt' 1;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
   }
 }
 
-@layer utilities {
-  /* Optimized Background Grid */
-  .bg-grid {
-    @apply relative;
-    background-image: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0.05) 1px,
-        transparent 1px
-      ),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-    background-size: 24px 24px;
-  }
+.modern-gradient {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--gradient-1)) 0%,
+    hsl(var(--gradient-2)) 25%,
+    hsl(var(--gradient-3)) 50%,
+    hsl(var(--gradient-4)) 100%
+  );
+}
 
-  /* Cyber Text Effect */
-  .cyber-text {
-    @apply bg-gradient-to-r from-white via-white/90 to-white/80 bg-clip-text text-transparent;
-  }
+.glass-effect {
+  @apply bg-white/10 backdrop-blur-md;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
 
-  /* Optimized Glow Effects */
-  .glow-sm {
-    box-shadow:
-      0 0 10px rgba(var(--primary), 0.3),
-      0 0 20px rgba(var(--primary), 0.2);
-  }
+.text-gradient {
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(
+    to right,
+    hsl(var(--gradient-1)),
+    hsl(var(--gradient-2))
+  );
+}
 
-  .glow-md {
-    box-shadow:
-      0 0 20px rgba(var(--primary), 0.4),
-      0 0 40px rgba(var(--primary), 0.2);
-  }
-
-  .glow-lg {
-    box-shadow:
-      0 0 30px rgba(var(--primary), 0.5),
-      0 0 60px rgba(var(--primary), 0.3);
-  }
-
-  /* Glass Effect */
-  .glass {
-    @apply bg-white/5 backdrop-blur-md;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  /* Futuristic Card */
-  .card-future {
-    @apply relative overflow-hidden rounded-xl border border-white/10 bg-white/5 backdrop-blur-md transition-all duration-300;
-  }
-
-  .card-future:hover {
-    @apply border-white/20 bg-white/10;
-  }
-
-  .card-future::before {
-    content: '';
-    @apply absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 blur-xl transition-opacity duration-500;
-  }
-
-  .card-future:hover::before {
-    @apply opacity-100;
-  }
-
-  /* Custom Scrollbar */
-  ::-webkit-scrollbar {
-    @apply w-1.5;
-  }
-
-  ::-webkit-scrollbar-track {
-    @apply bg-white/5;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply rounded-full bg-white/10 transition-colors hover:bg-white/20;
-  }
-
-  /* Animation Utilities */
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  @keyframes pulse-glow {
-    0%,
-    100% {
-      opacity: 0.5;
-    }
-    50% {
-      opacity: 1;
-    }
-  }
-
-  .animate-pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite;
-  }
-
-  /* Modern Button */
-  .btn-future {
-    @apply relative overflow-hidden rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm font-light text-white/80 backdrop-blur-sm transition-all hover:border-white/20 hover:bg-white/10;
-  }
-
-  .btn-future::before {
-    content: '';
-    @apply absolute inset-0 -z-10 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 blur-lg transition-opacity duration-300;
-  }
-
-  .btn-future:hover::before {
-    @apply opacity-100;
-  }
-
-  /* Badge Styles */
-  .badge-future {
-    @apply rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-[10px] font-light text-white/70 backdrop-blur-sm;
-  }
-
-  .badge-glow {
-    @apply rounded-full border border-cyan-500/30 bg-cyan-500/10 px-2.5 py-0.5 text-[10px] font-light text-cyan-300;
+.hover-glow {
+  @apply transition-all duration-300;
+  &:hover {
+    box-shadow: 0 0 20px rgba(var(--primary), 0.5);
   }
 }
 
-/* Reduce Motion */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
   }
 }
