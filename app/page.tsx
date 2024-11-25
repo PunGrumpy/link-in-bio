@@ -76,7 +76,7 @@ export default function Home() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="z-50 flex items-center justify-center gap-2 rounded-lg border border-foreground/20 px-4 py-2 text-foreground backdrop-blur-sm transition-colors duration-300 hover:text-[#ff4500] sm:border-0 sm:bg-transparent sm:p-0"
+              className="z-50 flex items-center justify-center gap-2 rounded-lg border border-foreground/20 px-4 py-2 text-foreground backdrop-blur-sm transition-colors duration-500 hover:text-[#ff4500] sm:border-0 sm:bg-transparent sm:p-0"
               aria-label={link.label}
             >
               {link.icon}
@@ -87,8 +87,14 @@ export default function Home() {
       </div>
       <footer className="absolute bottom-5 left-1/2 z-10 -translate-x-1/2 text-center text-sm text-foreground/50">
         <p>
-          &copy; {new Date().getFullYear()} Noppakorn Kaewsalabnil. All rights
-          reserved.
+          &copy; {new Date().getFullYear()}&nbsp;
+          <Link
+            href="https://pungrumpy.com"
+            className="border-b border-transparent text-[#ff4500] transition-all duration-500 hover:border-[#ff4500]"
+          >
+            Noppakorn Kaewsalabnil
+          </Link>
+          . All rights reserved.
         </p>
       </footer>
       <NoiseOverlay />
