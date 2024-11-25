@@ -36,6 +36,34 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png'
+  },
+  openGraph: {
+    title: 'PunGrumpy - Link in Bio',
+    description: 'Connect with me on various platforms',
+    type: 'website',
+    url: 'https://bio.pungrumpy.com',
+    siteName: 'PunGrumpy - Link in Bio',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1600,
+        height: 900,
+        alt: 'PunGrumpy - Link in Bio'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@PunGrumpy',
+    creator: '@PunGrumpy',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1600,
+        height: 900,
+        alt: 'PunGrumpy - Link in Bio'
+      }
+    ]
   }
 }
 
