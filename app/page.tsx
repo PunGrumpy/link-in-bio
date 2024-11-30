@@ -62,7 +62,7 @@ export default function Home() {
         </ul>
       </nav>
       <div className="z-10 w-full max-w-4xl text-center">
-        <h1 className="mb-4 text-6xl font-bold leading-none md:text-8xl lg:text-9xl">
+        <h1 className="mb-4 text-5xl font-bold leading-none md:text-8xl lg:text-9xl">
           <span className="text-stroke block">Noppakorn</span>
           <span className="block">Kaewsalabnil</span>
         </h1>
