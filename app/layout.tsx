@@ -1,5 +1,6 @@
 import '@/app/globals.css'
 
+import LogLib from '@loglib/tracker/react'
 import type { Metadata, Viewport } from 'next'
 import { Space_Grotesk } from 'next/font/google'
 
@@ -75,6 +76,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className="dark">
       <body className={cn(spaceGrotesk.className, 'scroll-smooth antialiased')}>
+        <LogLib
+          config={{
+            id: process.env.NEXT_PUBLIC_LOGLIB_ID!
+          }}
+        />
         {children}
       </body>
     </html>

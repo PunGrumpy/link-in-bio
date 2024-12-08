@@ -11,6 +11,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@loglib/tracker": "^0.8.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.0.0-alpha.2",
