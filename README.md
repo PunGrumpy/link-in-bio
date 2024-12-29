@@ -32,7 +32,7 @@ A modern, minimalist personal landing page built with Next.js, TypeScript, and T
 
 ### 📋 Prerequisites
 
-- Node.js 18+
+- Node.js 22.0.0 or higher (my space using 23.5.0)
 - [PNPM](https://pnpm.io) or [Bun](https://bun.sh) package manager
 
 ### ⚙️ Installation
