@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ❄️ Link in Bio
 
-## Getting Started
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="50%">
+        <img src="public/preview-desktop.png" alt="Preview Desktop" />
+        <p><strong>💻 Desktop Preview</strong></p>
+      </td>
+      <td align="center" width="50%">
+        <img src="public/preview-mobile.png" alt="Preview Mobile" />
+        <p><strong>📱 Mobile Preview</strong></p>
+      </td>
+    </tr>
+  </table>
+</div>
 
-First, run the development server:
+A modern, minimalist personal landing page built with Next.js, TypeScript, and Tailwind CSS.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Features
+
+- ⚡️ Next.js 15 with App Router
+- 🎨 Tailwind CSS for styling
+- 🌙 Dark mode support
+- 📱 Fully responsive design
+- 🎭 Custom noise overlay effect
+- 📊 Analytics integration with LogLib
+- ⌨️ Fully typed with TypeScript
+- 🎯 SEO optimized
+
+## 🚀 Getting Started
+
+### 📋 Prerequisites
+
+- Node.js 18+
+- [PNPM](https://pnpm.io) or [Bun](https://bun.sh) package manager
+
+### ⚙️ Installation
+
+1️⃣ Clone the repository:
+
+```sh
+git clone https://github.com/PunGrumpy/link-in-bio.git
+cd link-in-bio
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2️⃣ Install dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+bun install
+# or
+pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3️⃣ Create a `.env.local` file:
 
-## Learn More
+```sh
+NEXT_PUBLIC_LOGLIB_ID=your_loglib_id # Optional
+NEXT_PUBLIC_METADATA_BASE=your_site_url
+```
 
-To learn more about Next.js, take a look at the following resources:
+4️⃣ Run the development server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```sh
+bun dev
+# or
+pnpm dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🛠️ Development Scripts
 
-## Deploy on Vercel
+`bun dev` - Start development server
+`bun build` - Build for production
+`bun start` - Start production server
+`bun lint` - Run ESLint
+`bun format` - Format code with Prettier
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 💻 Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- ⚛️ [Next.js](https://nextjs.org)
+- 📘 [TypeScript](https://www.typescriptlang.org)
+- 🎨 [Tailwind CSS](https://tailwindcss.com)
+- 📊 [LogLib](https://loglib.io)
+- 🎯 [shadcn/ui](https://ui.shadcn.com)
+
+### 📝 License
+
+This project is licensed under the BSD 4-Clause License - see the [LICENSE](LICENSE) file for details.
