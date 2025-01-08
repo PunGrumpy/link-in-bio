@@ -87,7 +87,7 @@ export default function Home() {
       </div>
       <footer className="absolute bottom-5 left-1/2 z-10 w-full max-w-4xl -translate-x-1/2 px-20 text-center text-sm text-foreground/50">
         <div className="">
-          &copy; {new Date().getFullYear()}&nbsp;
+          &copy; {new Date().getUTCFullYear()}&nbsp;
           <Link
             href="https://pungrumpy.com"
             className="border-b border-transparent text-[#ff4500] transition-all duration-500 hover:border-[#ff4500]"
