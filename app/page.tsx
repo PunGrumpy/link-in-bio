@@ -4,12 +4,10 @@ import {
   Linkedin02Icon,
   NewTwitterIcon
 } from 'hugeicons-react'
-import Image from 'next/image'
-import Link from 'next/link'
 
 import { Footer } from '@/components/footer'
-import { NoiseOverlay } from '@/components/noise-overlay'
 import { Navigation } from '@/components/navigation'
+import { NoiseOverlay } from '@/components/noise-overlay'
 import { SocialLink } from '@/components/social-link'
 
 interface SocialLink {
