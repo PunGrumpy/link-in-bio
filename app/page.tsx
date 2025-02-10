@@ -5,7 +5,7 @@ import {
   NewTwitterIcon
 } from 'hugeicons-react'
 
-import { Footer } from '@/components/footer'
+import { Footer } from '@/components/footer/footer'
 import { Navigation } from '@/components/navigation'
 import { NoiseOverlay } from '@/components/noise-overlay'
 import { SocialLink } from '@/components/social-link'
