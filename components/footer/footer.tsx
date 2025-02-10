@@ -12,7 +12,7 @@ export function Footer({ url, className }: FooterProps) {
   return (
     <footer
       className={cn(
-        'text-foreground/500 absolute bottom-5 left-1/2 z-10 min-w-max -translate-x-1/2 px-20 text-center text-sm',
+        'text-foreground/500 absolute bottom-5 left-1/2 z-10 w-full min-w-max -translate-x-1/2 px-20 text-center text-sm sm:min-w-0 sm:max-w-4xl',
         className
       )}
     >
