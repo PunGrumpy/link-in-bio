@@ -3,7 +3,9 @@ import '@/app/globals.css'
 import LogLib from '@loglib/tracker/react'
 import type { Metadata, Viewport } from 'next'
 import { Space_Grotesk } from 'next/font/google'
+import Script from 'next/script'
 
+import { env } from '@/lib/env'
 import { cn } from '@/lib/utils'
 
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'] })
@@ -75,6 +77,11 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className="dark">
+      <Script
+        defer
+        src="https://app.rybbit.io/api/script.js"
+        data-site-id={env.RYBBIT_ID}
+      />
       <body className={cn(spaceGrotesk.className, 'scroll-smooth antialiased')}>
         <LogLib
           config={{
