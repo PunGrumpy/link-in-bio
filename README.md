@@ -55,8 +55,9 @@ pnpm install
 3️⃣ Create a `.env.local` file:
 
 ```sh
-NEXT_PUBLIC_LOGLIB_ID=your_loglib_id # Optional
-NEXT_PUBLIC_METADATA_BASE=your_site_url
+BETTERSTACK_API_KEY=""
+BETTERSTACK_URL=""
+RYBBIT_ID="" # Optional
 ```
 
 4️⃣ Run the development server:
@@ -80,7 +81,7 @@ pnpm dev
 - ⚛️ [Next.js](https://nextjs.org)
 - 📘 [TypeScript](https://www.typescriptlang.org)
 - 🎨 [Tailwind CSS](https://tailwindcss.com)
-- 📊 [LogLib](https://loglib.io)
+- 📊 [Rybbit](https://rybbit.io)
 - 🎯 [shadcn/ui](https://ui.shadcn.com)
 
 ### 📝 License
