@@ -1,10 +1,9 @@
-import '@/app/globals.css'
-
+import './globals.css'
 import LogLib from '@loglib/tracker/react'
 import type { Metadata, Viewport } from 'next'
 import { Space_Grotesk } from 'next/font/google'
 import Script from 'next/script'
-
+import type { ReactNode } from 'react'
 import { env } from '@/lib/env'
 import { cn } from '@/lib/utils'
 
@@ -70,22 +69,22 @@ export const metadata: Metadata = {
   }
 }
 
-interface RootLayoutProps {
-  children: React.ReactNode
+type RootLayoutProps = {
+  readonly children: ReactNode
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className="dark">
+    <html className="dark" lang="en">
       <Script
+        data-site-id={env.RYBBIT_ID}
         defer
         src="https://app.rybbit.io/api/script.js"
-        data-site-id={env.RYBBIT_ID}
       />
       <body className={cn(spaceGrotesk.className, 'scroll-smooth antialiased')}>
         <LogLib
           config={{
-            id: process.env.NEXT_PUBLIC_LOGLIB_ID!
+            id: env.NEXT_PUBLIC_LOGLIB_ID ?? ''
           }}
         />
         {children}

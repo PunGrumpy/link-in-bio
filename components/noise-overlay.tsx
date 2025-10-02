@@ -1,11 +1,10 @@
 'use client'
 
 import { cva, type VariantProps } from 'class-variance-authority'
-import * as React from 'react'
-
+import { forwardRef } from 'react'
 import { cn } from '@/lib/utils'
 
-const noiseOverlayVariants = cva('absolute pointer-events-none select-none', {
+const noiseOverlayVariants = cva('pointer-events-none absolute select-none', {
   variants: {
     size: {
       default: '-inset-1/2 size-[200%]',
@@ -57,7 +56,7 @@ export interface NoiseOverlayProps
   priority?: boolean
 }
 
-export const NoiseOverlay = React.forwardRef<HTMLDivElement, NoiseOverlayProps>(
+export const NoiseOverlay = forwardRef<HTMLDivElement, NoiseOverlayProps>(
   (
     {
       className,
@@ -79,19 +78,19 @@ export const NoiseOverlay = React.forwardRef<HTMLDivElement, NoiseOverlayProps>(
     ref
   ) => (
     <>
-      {priority && <link rel="preload" href={noiseImage} as="image" />}
+      {priority && <link as="image" href={noiseImage} rel="preload" />}
       <div
-        ref={ref}
+        aria-hidden="true"
         className={cn(
           noiseOverlayVariants({ size, intensity, speed, blend }),
           active && 'animate-noise',
           className
         )}
+        ref={ref}
         style={{
           zIndex,
           pointerEvents: 'none'
         }}
-        aria-hidden="true"
         {...props}
       >
         <div

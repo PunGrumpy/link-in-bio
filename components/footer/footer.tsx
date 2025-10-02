@@ -1,9 +1,8 @@
 import Link from 'next/link'
-
 import { Status } from '@/components/footer/status'
 import { cn } from '@/lib/utils'
 
-interface FooterProps {
+type FooterProps = {
   url: string
   className?: string
 }
@@ -12,7 +11,7 @@ export function Footer({ url, className }: FooterProps) {
   return (
     <footer
       className={cn(
-        'text-foreground/500 absolute bottom-5 left-1/2 z-10 w-full -translate-x-1/2 px-20 text-center text-sm',
+        '-translate-x-1/2 absolute bottom-5 left-1/2 z-10 w-full px-20 text-center text-foreground/500 text-sm',
         className
       )}
     >
@@ -21,8 +20,8 @@ export function Footer({ url, className }: FooterProps) {
         <div className="items-center text-center sm:justify-center sm:text-end">
           &copy; {new Date().getUTCFullYear()}&nbsp;
           <Link
+            className="border-transparent border-b text-[#ff4500] transition-all duration-500 hover:border-[#ff4500]"
             href={url}
-            className="border-b border-transparent text-[#ff4500] transition-all duration-500 hover:border-[#ff4500]"
           >
             Noppakorn Kaewsalabnil.
           </Link>
