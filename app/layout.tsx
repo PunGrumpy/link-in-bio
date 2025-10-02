@@ -11,8 +11,8 @@ const spaceGrotesk = Space_Grotesk({ subsets: ['latin'] })
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#FAFAFA' },
-    { media: '(prefers-color-scheme: dark)', color: '#09090B' }
+    { media: '(prefers-color-scheme: light)', color: '#FFFFFF' },
+    { media: '(prefers-color-scheme: dark)', color: '#000000' }
   ]
 }
 
