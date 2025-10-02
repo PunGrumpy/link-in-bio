@@ -4,6 +4,7 @@ import type { Metadata, Viewport } from 'next'
 import { Space_Grotesk } from 'next/font/google'
 import Script from 'next/script'
 import type { ReactNode } from 'react'
+import { NoiseOverlay } from '@/components/noise-overlay'
 import { env } from '@/lib/env'
 import { cn } from '@/lib/utils'
 
@@ -87,7 +88,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
             id: env.NEXT_PUBLIC_LOGLIB_ID ?? ''
           }}
         />
-        {children}
+        <main className="relative overflow-hidden">
+          {children}
+          <NoiseOverlay />
+        </main>
       </body>
     </html>
   )

@@ -9,7 +9,10 @@ export default function NotFound() {
       <p className="mb-8 text-xl">
         Oops! The page you&apos;re looking for doesn&apos;t exist.
       </p>
-      <Link className="font-semibold text-lg transition-colors" href="/">
+      <Link
+        className="font-semibold text-lg transition-colors hover:text-[#ff4500]"
+        href="/"
+      >
         Go back home
       </Link>
     </div>

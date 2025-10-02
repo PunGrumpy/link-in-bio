@@ -7,7 +7,6 @@ import {
 import type { ReactNode } from 'react'
 import { Footer } from '@/components/footer/footer'
 import { Navigation } from '@/components/navigation'
-import { NoiseOverlay } from '@/components/noise-overlay'
 import { SocialLink } from '@/components/social-link'
 
 type SocialLinkProps = {
@@ -41,7 +40,7 @@ const links: SocialLinkProps[] = [
 
 export default function Home() {
   return (
-    <main className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden p-4">
+    <main className="flex min-h-screen flex-col items-center justify-center p-4">
       <Navigation links={links} />
 
       <div className="z-10 w-full max-w-4xl text-center">
@@ -55,7 +54,6 @@ export default function Home() {
         <SocialLink links={links} />
       </div>
       <Footer url={'https://pungrumpy.com'} />
-      <NoiseOverlay />
     </main>
   )
 }
