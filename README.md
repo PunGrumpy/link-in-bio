@@ -55,6 +55,10 @@ pnpm install
 3️⃣ Create a `.env.local` file:
 
 ```sh
+# Copy the example file
+cp .env.example .env.local
+
+# Edit the .env.local file with your own values
 BETTERSTACK_API_KEY=""
 BETTERSTACK_URL=""
 RYBBIT_ID="" # Optional
@@ -70,19 +74,19 @@ pnpm dev
 
 ### 🛠️ Development Scripts
 
-`bun dev` - Start development server
-`bun build` - Build for production
-`bun start` - Start production server
-`bun lint` - Run ESLint
-`bun format` - Format code with Prettier
+- `bun dev` - Start development server
+- `bun build` - Build for production
+- `bun start` - Start production server
+- `bun lint` - Run Biome checker
+- `bun format` - Run Biome fix
 
 ### 💻 Tech Stack
 
-- ⚛️ [Next.js](https://nextjs.org)
-- 📘 [TypeScript](https://www.typescriptlang.org)
-- 🎨 [Tailwind CSS](https://tailwindcss.com)
-- 📊 [Rybbit](https://rybbit.io)
-- 🎯 [shadcn/ui](https://ui.shadcn.com)
+- ⚛️ [Next.js](https://nextjs.org) - A React framework for building server-rendered React applications
+- 📘 [TypeScript](https://www.typescriptlang.org) - A superset of JavaScript that compiles to clean JavaScript output
+- 🎨 [Tailwind CSS](https://tailwindcss.com) - A utility-first CSS framework for rapidly building custom designs
+- 📊 [Rybbit](https://rybbit.io) - A analytics platform for tracking website traffic and engagement
+- 🎯 [shadcn/ui](https://ui.shadcn.com) - A library of reusable UI components for building modern web applications
 
 ### 📝 License
 
