@@ -14,7 +14,7 @@ export function SocialLink({ links }: SocialLinkProps) {
       {links.map(link => (
         <Link
           aria-label={link.label}
-          className="z-50 flex items-center justify-center gap-2 rounded-none border border-foreground/20 px-4 py-2 text-foreground backdrop-blur-sm transition-colors duration-500 hover:bg-foreground/5 hover:text-[#ff4500] sm:border-0 sm:bg-transparent sm:p-0"
+          className="z-50 flex items-center justify-center gap-2 rounded-none border border-foreground/20 px-4 py-2 text-foreground backdrop-blur-xs transition-colors duration-500 hover:bg-foreground/5 hover:text-[#ff4500] sm:border-0 sm:bg-transparent sm:p-0"
           href={link.href}
           key={link.label}
           rel="noopener noreferrer"
