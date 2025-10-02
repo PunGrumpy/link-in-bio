@@ -2,6 +2,7 @@
   "name": "link-in-bio",
   "version": "4.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "start": "next start",
     "build": "next build --turbopack",
