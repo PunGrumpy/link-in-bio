@@ -1,5 +1,4 @@
 import './globals.css'
-import LogLib from '@loglib/tracker/react'
 import type { Metadata, Viewport } from 'next'
 import { Space_Grotesk } from 'next/font/google'
 import Script from 'next/script'
@@ -83,11 +82,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
         src="https://app.rybbit.io/api/script.js"
       />
       <body className={cn(spaceGrotesk.className, 'scroll-smooth antialiased')}>
-        <LogLib
-          config={{
-            id: env.NEXT_PUBLIC_LOGLIB_ID ?? ''
-          }}
-        />
         <main className="relative overflow-hidden">
           {children}
           <NoiseOverlay />
