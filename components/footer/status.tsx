@@ -1,3 +1,4 @@
+import { env } from '@/lib/env'
 import 'server-only'
 
 type BetterStackResponse = {
@@ -72,7 +73,7 @@ export const Status = async () => {
       'https://uptime.betterstack.com/api/v2/monitors',
       {
         headers: {
-          Authorization: `Bearer ${process.env.BETTERSTACK_API_KEY}`
+          Authorization: `Bearer ${env.BETTERSTACK_API_KEY}`
         }
       }
     )
@@ -105,7 +106,7 @@ export const Status = async () => {
   return (
     <a
       className="flex items-center gap-3 text-sm"
-      href={process.env.BETTERSTACK_URL}
+      href={env.BETTERSTACK_URL}
       rel="noreferrer"
       target="_blank"
     >
