@@ -1,11 +1,10 @@
 import './globals.css'
 import type { Metadata, Viewport } from 'next'
 import { Space_Grotesk } from 'next/font/google'
-import Script from 'next/script'
 import type { ReactNode } from 'react'
 import { NoiseOverlay } from '@/components/noise-overlay'
-import { env } from '@/lib/env'
 import { cn } from '@/lib/utils'
+import { AnalyticsProvider } from '@/providers/analytics'
 
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'] })
 
@@ -76,16 +75,12 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html className="dark" lang="en">
-      <Script
-        data-site-id={env.RYBBIT_ID}
-        defer
-        src="https://app.rybbit.io/api/script.js"
-      />
       <body className={cn(spaceGrotesk.className, 'scroll-smooth antialiased')}>
         <main className="relative overflow-hidden">
           {children}
           <NoiseOverlay />
         </main>
+        <AnalyticsProvider />
       </body>
     </html>
   )

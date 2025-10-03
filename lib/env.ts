@@ -9,10 +9,13 @@ export const env = createEnv({
     BETTERSTACK_API_KEY: z.string(),
     RYBBIT_ID: z.string().optional()
   },
-  client: {},
+  client: {
+    NEXT_PUBLIC_DATABUDDY_CLIENT_ID: z.string().optional()
+  },
   runtimeEnv: {
     BETTERSTACK_URL: process.env.BETTERSTACK_URL,
     BETTERSTACK_API_KEY: process.env.BETTERSTACK_API_KEY,
-    RYBBIT_ID: process.env.RYBBIT_ID
+    RYBBIT_ID: process.env.RYBBIT_ID,
+    NEXT_PUBLIC_DATABUDDY_CLIENT_ID: process.env.NEXT_PUBLIC_DATABUDDY_CLIENT_ID
   }
 })
