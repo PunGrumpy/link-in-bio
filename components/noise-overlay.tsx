@@ -1,7 +1,6 @@
 'use client'
 
 import { cva, type VariantProps } from 'class-variance-authority'
-import { forwardRef } from 'react'
 import { cn } from '@/lib/utils'
 
 const noiseOverlayVariants = cva('pointer-events-none absolute select-none', {
@@ -54,38 +53,48 @@ export interface NoiseOverlayProps
   fixedPosition?: boolean
   grayscale?: boolean
   priority?: boolean
+  ref?: React.Ref<HTMLDivElement>
 }
 
-export const NoiseOverlay = forwardRef<HTMLDivElement, NoiseOverlayProps>(
-  (
-    {
-      className,
-      size = 'xl',
-      intensity,
-      speed,
-      blend,
-      noiseImage = 'https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png',
-      zIndex = 20,
-      active = true,
-      repeat = 'repeat',
-      position = '0 0',
-      backgroundSize = '256px 256px',
-      fixedPosition = false,
-      grayscale = false,
-      priority = true,
-      ...props
-    },
-    ref
-  ) => (
+export const NoiseOverlay = ({
+  className,
+  size = 'xl',
+  intensity,
+  speed,
+  blend,
+  noiseImage = 'https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png',
+  zIndex = 20,
+  active = true,
+  repeat = 'repeat',
+  position = '0 0',
+  backgroundSize = '256px 256px',
+  fixedPosition = false,
+  grayscale = false,
+  priority = true,
+  ref,
+  ...props
+}: NoiseOverlayProps) => {
+  const baseClasses = noiseOverlayVariants({ size, intensity, speed, blend })
+  const overlayClasses = ['absolute', 'size-full']
+
+  if (grayscale) {
+    overlayClasses.push('grayscale')
+  }
+  if (fixedPosition) {
+    overlayClasses.push('fixed')
+  }
+
+  const outerClasses = [baseClasses]
+  if (active) {
+    outerClasses.push('animate-noise')
+  }
+
+  return (
     <>
-      {priority && <link as="image" href={noiseImage} rel="preload" />}
+      {priority ? <link as="image" href={noiseImage} rel="preload" /> : null}
       <div
         aria-hidden="true"
-        className={cn(
-          noiseOverlayVariants({ size, intensity, speed, blend }),
-          active && 'animate-noise',
-          className
-        )}
+        className={cn(outerClasses, className)}
         ref={ref}
         style={{
           zIndex,
@@ -94,11 +103,7 @@ export const NoiseOverlay = forwardRef<HTMLDivElement, NoiseOverlayProps>(
         {...props}
       >
         <div
-          className={cn(
-            'absolute size-full',
-            grayscale && 'grayscale',
-            fixedPosition && 'fixed'
-          )}
+          className={cn(overlayClasses)}
           style={{
             background: `url("${noiseImage}") ${repeat} ${position}`,
             backgroundSize,
@@ -108,5 +113,4 @@ export const NoiseOverlay = forwardRef<HTMLDivElement, NoiseOverlayProps>(
       </div>
     </>
   )
-)
-NoiseOverlay.displayName = 'NoiseOverlay'
+}

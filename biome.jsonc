@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-  "extends": ["ultracite"],
+  "extends": ["ultracite/core", "ultracite/react", "ultracite/next"],
   "formatter": {
     "bracketSpacing": true,
     "lineEnding": "lf",
@@ -24,5 +24,8 @@
       "semicolons": "asNeeded",
       "trailingCommas": "none"
     }
+  },
+  "files": {
+    "includes": ["**", "!components/ui"]
   }
 }
