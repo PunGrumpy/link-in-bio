@@ -13,10 +13,7 @@ export const AnalyticsProvider = () => (
       clientId={env.NEXT_PUBLIC_DATABUDDY_CLIENT_ID}
       enableBatching={true}
       trackAttributes={true}
-      trackBounceRate={true}
-      trackEngagement={true}
       trackErrors={true}
-      trackExitIntent={true}
       trackHashChanges={true}
       trackInteractions={true}
       trackOutgoingLinks={true}
