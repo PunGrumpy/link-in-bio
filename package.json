@@ -9,7 +9,7 @@
     "dev": "next dev --turbopack",
     "format": "ultracite fix",
     "lint": "ultracite check",
-    "bump-deps": "bunx --bun npm-check-updates --deep -u -x recharts && bun install",
+    "bump-deps": "bunx npm-check-updates --deep -u && bun install",
     "clean": "git clean -xdf node_modules"
   },
   "dependencies": {
