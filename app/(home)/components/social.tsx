@@ -30,7 +30,7 @@ const links = [
 ]
 
 export const Social = () => (
-  <div className="flex flex-col gap-4 sm:flex-row sm:justify-center sm:space-x-6">
+  <div className="z-0 flex w-full flex-col gap-4 sm:flex-row sm:justify-center sm:space-x-6">
     {links.map(link => (
       <Link
         aria-label={link.label}
