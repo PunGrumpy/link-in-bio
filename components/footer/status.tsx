@@ -1,7 +1,7 @@
 import { env } from '@/lib/env'
 import 'server-only'
 
-type BetterStackResponse = {
+interface BetterStackResponse {
   data: {
     id: string
     type: string

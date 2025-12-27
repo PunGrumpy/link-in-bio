@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   }
 }
 
-type RootLayoutProps = {
+interface RootLayoutProps {
   readonly children: ReactNode
 }
 

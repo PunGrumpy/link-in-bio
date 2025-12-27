@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Status } from '@/components/footer/status'
 import { cn } from '@/lib/utils'
 
-type FooterProps = {
+interface FooterProps {
   url: string
   className?: string
 }
@@ -11,7 +11,7 @@ export function Footer({ url, className }: FooterProps) {
   return (
     <footer
       className={cn(
-        '-translate-x-1/2 absolute bottom-5 left-1/2 z-10 w-full px-20 text-center text-foreground/500 text-sm',
+        'absolute bottom-5 left-1/2 z-10 w-full -translate-x-1/2 px-20 text-center text-foreground/500 text-sm',
         className
       )}
     >

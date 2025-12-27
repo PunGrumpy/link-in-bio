@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-type NagivationProps = {
+interface NagivationProps {
   links: {
     label: string
     href: string

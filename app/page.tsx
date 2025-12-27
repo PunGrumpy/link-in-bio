@@ -9,7 +9,7 @@ import { Footer } from '@/components/footer/footer'
 import { Navigation } from '@/components/navigation'
 import { SocialLink } from '@/components/social-link'
 
-type SocialLinkProps = {
+interface SocialLinkProps {
   icon: ReactNode
   label: string
   href: string

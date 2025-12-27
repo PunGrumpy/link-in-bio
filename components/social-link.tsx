@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-type SocialLinkProps = {
+interface SocialLinkProps {
   links: {
     label: string
     href: string
