@@ -1,19 +1,10 @@
 import Link from 'next/link'
 import { Status } from '@/components/footer/status'
-import { cn } from '@/lib/utils'
 
-interface FooterProps {
-  url: string
-  className?: string
-}
+const url = 'https://pungrumpy.com'
 
-export const Footer = ({ url, className }: FooterProps) => (
-  <footer
-    className={cn(
-      'absolute bottom-5 left-1/2 z-10 w-full -translate-x-1/2 px-20 text-center text-foreground/500 text-sm',
-      className
-    )}
-  >
+export const Footer = () => (
+  <footer className="absolute bottom-5 left-1/2 z-10 w-full -translate-x-1/2 px-20 text-center text-foreground/500 text-sm">
     <div className="grid items-center justify-items-center gap-4 sm:grid-cols-2 sm:justify-between sm:justify-items-stretch">
       <Status />
       <div className="items-center text-center sm:justify-center sm:text-end">

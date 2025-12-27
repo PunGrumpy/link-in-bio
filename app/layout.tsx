@@ -1,6 +1,8 @@
 import './globals.css'
 import type { Metadata, Viewport } from 'next'
 import type { ReactNode } from 'react'
+import { Footer } from '@/components/footer'
+import { Header } from '@/components/header'
 import { NoiseOverlay } from '@/components/noise-overlay'
 import { fonts } from '@/lib/fonts'
 import { createMetadata } from '@/lib/metadata'
@@ -26,7 +28,10 @@ const RootLayout = ({ children }: RootLayoutProps) => (
   <html className="dark" lang="en">
     <body className={fonts}>
       <main className="relative overflow-hidden">
+        <Header />
         {children}
+        <Footer />
+
         <NoiseOverlay />
       </main>
       <AnalyticsProvider />
