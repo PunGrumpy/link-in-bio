@@ -38,22 +38,22 @@ const links: SocialLinkProps[] = [
   }
 ]
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-4">
-      <Navigation links={links} />
+const Home = () => (
+  <main className="flex min-h-screen flex-col items-center justify-center p-4">
+    <Navigation links={links} />
 
-      <div className="z-10 w-full max-w-4xl text-center">
-        <h1 className="mb-4 font-bold text-5xl leading-none md:text-8xl lg:text-9xl">
-          <span className="block text-stroke">Noppakorn</span>
-          <span className="block">Kaewsalabnil</span>
-        </h1>
-        <p className="mb-8 text-[#ff4500] text-lg sm:mb-12 sm:text-xl md:text-2xl">
-          Web Developer | Designer | Photographer
-        </p>
-        <SocialLink links={links} />
-      </div>
-      <Footer url={'https://pungrumpy.com'} />
-    </main>
-  )
-}
+    <div className="z-10 w-full max-w-4xl text-center">
+      <h1 className="mb-4 font-bold text-5xl leading-none md:text-8xl lg:text-9xl">
+        <span className="block text-stroke">Noppakorn</span>
+        <span className="block">Kaewsalabnil</span>
+      </h1>
+      <p className="mb-8 text-[#ff4500] text-lg sm:mb-12 sm:text-xl md:text-2xl">
+        Web Developer | Designer | Photographer
+      </p>
+      <SocialLink links={links} />
+    </div>
+    <Footer url={'https://pungrumpy.com'} />
+  </main>
+)
+
+export default Home

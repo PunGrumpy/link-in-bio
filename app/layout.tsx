@@ -72,16 +72,16 @@ interface RootLayoutProps {
   readonly children: ReactNode
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
-  return (
-    <html className="dark" lang="en">
-      <body className={cn(spaceGrotesk.className, 'scroll-smooth antialiased')}>
-        <main className="relative overflow-hidden">
-          {children}
-          <NoiseOverlay />
-        </main>
-        <AnalyticsProvider />
-      </body>
-    </html>
-  )
-}
+const RootLayout = ({ children }: RootLayoutProps) => (
+  <html className="dark" lang="en">
+    <body className={cn(spaceGrotesk.className, 'scroll-smooth antialiased')}>
+      <main className="relative overflow-hidden">
+        {children}
+        <NoiseOverlay />
+      </main>
+      <AnalyticsProvider />
+    </body>
+  </html>
+)
+
+export default RootLayout
