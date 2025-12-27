@@ -21,7 +21,7 @@ const links = [
 ]
 
 export const Header = () => (
-  <header className="absolute top-5 z-10 w-full px-20 text-center">
+  <header className="absolute top-5 z-10 hidden w-full px-20 text-center md:block">
     <nav className="flex w-full items-center justify-between">
       <Icons.Logo className="size-6" />
       <ul className="flex space-x-4">
