@@ -3,9 +3,9 @@ import { Status } from '@/components/footer/status'
 import { Time } from './time'
 
 export const Footer = () => (
-  <footer className="absolute bottom-5 z-10 w-full px-20">
+  <footer className="absolute bottom-5 z-10 w-full px-4 sm:px-20">
     <div className="grid items-center justify-items-center gap-4 sm:grid-cols-2 sm:justify-between sm:justify-items-stretch">
-      <div className="flex gap-1">
+      <div className="flex flex-wrap items-center justify-center gap-1 sm:justify-start">
         <Status />
         <Time />
       </div>
