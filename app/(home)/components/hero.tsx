@@ -5,7 +5,7 @@ export const Hero = () => (
       <span className="block">Kaewsalabnil</span>
     </h1>
     <p className="text-[#ff4500] text-lg sm:text-xl md:text-2xl">
-      Web Developer | Designer | Photographer
+      Web Developer | Designer | DevSecOps Engineer
     </p>
   </section>
 )
