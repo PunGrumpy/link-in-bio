@@ -10,22 +10,22 @@ const links = [
   {
     icon: <Globe02Icon aria-hidden="true" focusable="false" />,
     label: 'Portfolio',
-    href: 'https://pungrumpy.com'
+    href: 'https://link.pungrumpy.com/me'
   },
   {
     icon: <GithubIcon aria-hidden="true" focusable="false" />,
     label: 'GitHub',
-    href: 'https://github.com/PunGrumpy'
+    href: 'https://link.pungrumpy.com/github'
   },
   {
     icon: <NewTwitterIcon aria-hidden="true" focusable="false" />,
     label: 'Twitter',
-    href: 'https://x.com/PunGrumpy'
+    href: 'https://link.pungrumpy.com/x'
   },
   {
     icon: <Linkedin02Icon aria-hidden="true" focusable="false" />,
     label: 'LinkedIn',
-    href: 'https://linkedin.com/in/noppakorn-kaewsalabnil'
+    href: 'https://link.pungrumpy.com/linkedin'
   }
 ]
 
