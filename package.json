@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "next start",
-    "build": "next build --turbopack",
-    "dev": "next dev --turbopack",
+    "build": "next build",
+    "dev": "next dev",
     "format": "ultracite fix",
     "lint": "ultracite check",
     "bump-deps": "bunx npm-check-updates --deep -u && bun install",
