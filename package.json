@@ -10,6 +10,7 @@
     "format": "ultracite fix",
     "lint": "ultracite check",
     "bump-deps": "bunx npm-check-updates --deep -u && bun install",
+    "bump-ui": "bunx --bun shadcn add --all --overwrite && bunx --bun shadcn migrate --yes radix",
     "clean": "git clean -xdf node_modules"
   },
   "dependencies": {
