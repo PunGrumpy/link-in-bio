@@ -1,29 +1,24 @@
-import {
-  GithubIcon,
-  Globe02Icon,
-  Linkedin02Icon,
-  NewTwitterIcon
-} from 'hugeicons-react'
 import Link from 'next/link'
+import { Icons } from '@/components/icons'
 
 const links = [
   {
-    icon: <Globe02Icon aria-hidden="true" focusable="false" />,
+    icon: Icons.GlobeIcon,
     label: 'Portfolio',
     href: 'https://link.pungrumpy.com/me'
   },
   {
-    icon: <GithubIcon aria-hidden="true" focusable="false" />,
+    icon: Icons.GitHubIcon,
     label: 'GitHub',
     href: 'https://link.pungrumpy.com/github'
   },
   {
-    icon: <NewTwitterIcon aria-hidden="true" focusable="false" />,
+    icon: Icons.TwitterIcon,
     label: 'Twitter',
     href: 'https://link.pungrumpy.com/x'
   },
   {
-    icon: <Linkedin02Icon aria-hidden="true" focusable="false" />,
+    icon: Icons.LinkedInIcon,
     label: 'LinkedIn',
     href: 'https://link.pungrumpy.com/linkedin'
   }
@@ -40,7 +35,7 @@ export const Social = () => (
         rel="noopener noreferrer"
         target="_blank"
       >
-        {link.icon}
+        <link.icon aria-hidden="true" className="size-4 md:size-6" />
         <span className="text-sm sm:hidden">{link.label}</span>
       </Link>
     ))}
