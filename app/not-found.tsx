@@ -9,7 +9,7 @@ const NotFound = () => (
       Oops! The page you&apos;re looking for doesn&apos;t exist.
     </p>
     <Link
-      className="font-semibold text-lg transition-colors hover:text-[#ff4500]"
+      className="font-semibold text-lg transition-[color,background-color,border-color,transform] duration-200 ease-in hover:text-[#ff4500] hover:ease-out active:scale-[0.98] motion-reduce:transition-none motion-reduce:active:scale-100"
       href="/"
     >
       Go back home

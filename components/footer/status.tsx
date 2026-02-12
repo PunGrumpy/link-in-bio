@@ -105,7 +105,7 @@ export const Status = async () => {
 
   return (
     <a
-      className="flex items-center gap-3 text-sm"
+      className="flex items-center gap-3 text-sm transition-transform duration-200 ease-out active:scale-[0.98] motion-reduce:transition-none motion-reduce:active:scale-100"
       href={env.BETTERSTACK_URL}
       rel="noreferrer"
       target="_blank"
@@ -118,7 +118,7 @@ export const Status = async () => {
           className={`relative inline-flex size-2 rounded-full ${statusColor}`}
         />
       </span>
-      <span className="text-muted-foreground transition-colors duration-500 hover:text-foreground">
+      <span className="text-muted-foreground transition-colors duration-200 ease-in hover:text-foreground hover:ease-out motion-reduce:transition-none">
         {statusLabel}
       </span>
     </a>

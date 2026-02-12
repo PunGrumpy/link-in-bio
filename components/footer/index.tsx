@@ -13,7 +13,7 @@ export const Footer = () => (
       <div className="items-center text-center text-sm sm:justify-center sm:text-end">
         &copy; {new Date().getUTCFullYear()}&nbsp;
         <Link
-          className="border-transparent border-b text-[#ff4500] transition-all duration-500 hover:border-[#ff4500]"
+          className="border-transparent border-b text-[#ff4500] transition-[color,background-color,border-color,transform] duration-200 ease-in hover:border-[#ff4500] hover:ease-out active:scale-[0.98] motion-reduce:transition-none motion-reduce:active:scale-100"
           href="https://pungrumpy.com"
         >
           Noppakorn Kaewsalabnil.

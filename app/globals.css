@@ -226,3 +226,9 @@
   -webkit-text-stroke: 1px var(--color-primary);
   color: transparent;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-noise {
+    animation: none;
+  }
+}

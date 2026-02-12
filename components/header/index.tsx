@@ -28,7 +28,7 @@ export const Header = () => (
         {links.map(link => (
           <li key={link.label}>
             <Link
-              className="text-sm transition-colors hover:text-[#ff4500]"
+              className="text-sm transition-[color,background-color,border-color,transform] duration-200 ease-in hover:text-[#ff4500] hover:ease-out active:scale-[0.98] motion-reduce:transition-none motion-reduce:active:scale-100"
               href={link.href}
             >
               {link.label}
