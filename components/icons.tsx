@@ -1,8 +1,6 @@
 import type { SVGProps } from 'react'
 
-interface SVGIconProps extends SVGProps<SVGSVGElement> {
-  className?: string
-}
+type SVGIconProps = SVGProps<SVGSVGElement>
 
 export const Icons = {
   Logo: (props: SVGIconProps) => (
