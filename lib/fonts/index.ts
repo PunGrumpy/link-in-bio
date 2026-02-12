@@ -1,13 +1,9 @@
-import { Space_Grotesk } from 'next/font/google'
+import { GeistPixelSquare } from 'geist/font/pixel'
 import localFont from 'next/font/local'
 import { cn } from '../utils'
 
-const spaceGrotesk = Space_Grotesk({
-  display: 'swap',
-  subsets: ['latin'],
-  variable: '--font-space-grotesk'
-})
-const basementGrotesque = localFont({
+const sans = GeistPixelSquare
+const mono = localFont({
   src: [
     {
       path: './BasementGrotesque-Black_v1.202.woff2',
@@ -21,6 +17,6 @@ const basementGrotesque = localFont({
 
 export const fonts = cn(
   'touch-manipulation font-sans antialiased',
-  spaceGrotesk.variable,
-  basementGrotesque.variable
+  sans.variable,
+  mono.variable
 )
