@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
 import type { WebSite, WithContext } from 'schema-dts'
+import { Cursor } from '@/components/cursor'
 import { fonts } from '@/lib/fonts'
 import { escapeJsonForHtml } from '@/lib/utils'
 import { ThemeProvider } from '@/providers/theme'
@@ -88,7 +89,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
     </head>
 
     <body className="flex min-h-full flex-col">
-      <ThemeProvider>{children}</ThemeProvider>
+      <ThemeProvider>
+        <Cursor />
+        {children}
+      </ThemeProvider>
     </body>
   </html>
 )
