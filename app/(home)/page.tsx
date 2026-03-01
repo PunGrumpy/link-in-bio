@@ -1,4 +1,14 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'PunGrumpy — Built on Principle.'
+  },
+  alternates: {
+    canonical: 'https://bio.pungrumpy.com'
+  }
+}
 
 export default function Home() {
   return (
