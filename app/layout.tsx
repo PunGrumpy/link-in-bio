@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
 import type { WebSite, WithContext } from 'schema-dts'
 import { Cursor } from '@/components/cursor'
+import { Footer } from '@/components/footer'
 import { fonts } from '@/lib/fonts'
 import { escapeJsonForHtml } from '@/lib/utils'
 import { ThemeProvider } from '@/providers/theme'
@@ -92,6 +93,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
       <ThemeProvider>
         <Cursor />
         {children}
+        <Footer />
       </ThemeProvider>
     </body>
   </html>
