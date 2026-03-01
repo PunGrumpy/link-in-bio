@@ -104,6 +104,7 @@
   --shadow-2xl: 0px 1px 2px 0px hsl(0 0% 0% / 0.45);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
+  --green: var(--color-tertiary);
 }
 
 .dark {
@@ -193,4 +194,15 @@
       transition-duration: 0.01ms !important;
     }
   }
+}
+
+@utility grid-layout {
+  @apply grid w-full max-w-full grid-cols-4 lg:grid-cols-8 gap-6 mx-auto px-6;
+}
+
+@utility decorate {
+  @apply relative flex items-center w-fit;
+  @apply before:pointer-events-none before:absolute before:bottom-0.5 before:left-0 before:h-[0.05em] before:w-full before:bg-current before:content-[''];
+  @apply before:origin-right before:scale-x-0 before:transition-transform before:duration-300 before:ease-in-out;
+  @apply hover:before:origin-left hover:before:scale-x-100 hover:text-tertiary;
 }
