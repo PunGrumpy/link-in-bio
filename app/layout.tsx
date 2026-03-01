@@ -4,6 +4,7 @@ import Script from 'next/script'
 import type { WebSite, WithContext } from 'schema-dts'
 import { fonts } from '@/lib/fonts'
 import { escapeJsonForHtml } from '@/lib/utils'
+import { ThemeProvider } from '@/providers/theme'
 
 const applicationName = 'PunGrumpy'
 const productionUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
@@ -86,7 +87,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
       />
     </head>
 
-    <body className="flex min-h-full flex-col">{children}</body>
+    <body className="flex min-h-full flex-col">
+      <ThemeProvider>{children}</ThemeProvider>
+    </body>
   </html>
 )
 
