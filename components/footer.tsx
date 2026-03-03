@@ -9,7 +9,7 @@ export const Footer = () => {
   return (
     <footer className="relative w-full">
       <div className="grid-layout w-full pt-4 pb-6 uppercase">
-        <p className="col-span-2 text-tertiary text-xs">
+        <p className="col-span-2 text-tertiary text-xs lg:col-span-3">
           Noppakorn Kaewsalabnil
         </p>
         {!isMobile && (
@@ -73,7 +73,7 @@ export const Footer = () => {
         )}
 
         {!isMobile && (
-          <ul className="col-span-2">
+          <ul className="col-span-2 lg:ml-auto">
             <li className="text-muted-foreground text-xs">
               &copy; {new Date().getFullYear()}
             </li>
