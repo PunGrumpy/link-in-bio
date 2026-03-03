@@ -1,15 +1,20 @@
+import { Icons } from '@/components/icons'
+
 export const social = [
   {
     title: 'GitHub',
-    href: 'https://github.com/PunGrumpy'
+    href: 'https://github.com/PunGrumpy',
+    icon: Icons.GitHub
   },
   {
     title: 'LinkedIn',
-    href: 'https://linkedin.com/in/noppakorn-kaewsalabnil'
+    href: 'https://linkedin.com/in/noppakorn-kaewsalabnil',
+    icon: Icons.LinkedIn
   },
   {
     title: 'X(Twitter)',
-    href: 'https://x.com/PunGrumpy'
+    href: 'https://x.com/PunGrumpy',
+    icon: Icons.Twitter
   },
   {
     title: 'Website',
