@@ -4,6 +4,7 @@ import Script from 'next/script'
 import type { WebSite, WithContext } from 'schema-dts'
 import { Cursor } from '@/components/cursor'
 import { Footer } from '@/components/footer'
+import { Header } from '@/components/header'
 import { Noise } from '@/components/noise'
 import { fonts } from '@/lib/fonts'
 import { escapeJsonForHtml } from '@/lib/utils'
@@ -93,9 +94,12 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
     <body className="flex min-h-full flex-col">
       <ThemeProvider>
         <Cursor />
-        {children}
+        <main>
+          <Header />
+          {children}
+          <Footer />
+        </main>
         <Noise />
-        <Footer />
       </ThemeProvider>
     </body>
   </html>
