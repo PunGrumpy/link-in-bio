@@ -223,8 +223,8 @@
 }
 
 @utility text-stroke {
-  -webkit-text-stroke: 1px var(--color-primary);
   color: transparent;
+  -webkit-text-stroke: 1px var(--color-primary);
 }
 
 @media (prefers-reduced-motion: reduce) {
