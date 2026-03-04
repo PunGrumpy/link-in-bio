@@ -1,6 +1,6 @@
 'use client'
 
-import { useAnimationFrame } from 'framer-motion'
+import { useAnimationFrame } from 'motion/react'
 import { useState } from 'react'
 
 export const Time = () => {
