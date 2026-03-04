@@ -19,7 +19,7 @@ export const Time = () => {
   return (
     <div className="flex gap-1 text-muted-foreground text-sm tracking-widest">
       <span>{'//'}</span>
-      <span className="text-foreground tabular-nums">{time}</span>
+      <span className="w-[100px] text-foreground tabular-nums">{time}</span>
     </div>
   )
 }
