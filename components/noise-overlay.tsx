@@ -17,8 +17,7 @@ export const NoiseOverlay = ({ className, ...props }: NoiseOverlayProps) => (
       className="absolute size-full"
       style={{
         background: `url("https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png") repeat 0 0`,
-        backgroundSize: '256px 256px',
-        willChange: 'transform'
+        backgroundSize: '256px 256px'
       }}
     />
   </div>
