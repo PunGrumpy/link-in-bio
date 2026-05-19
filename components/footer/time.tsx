@@ -2,7 +2,7 @@
 
 import { useReducedMotion } from 'framer-motion'
 import { useAnimationFrame } from 'motion/react'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const formatTime = (date: Date) => {
   const hours = date.getHours().toString().padStart(2, '0')
@@ -14,12 +14,8 @@ const formatTime = (date: Date) => {
 }
 
 export const Time = () => {
-  const [time, setTime] = useState('--:--:--.---')
+  const [time, setTime] = useState(() => formatTime(new Date()))
   const shouldReduceMotion = useReducedMotion()
-
-  useEffect(() => {
-    setTime(formatTime(new Date()))
-  }, [])
 
   useAnimationFrame(() => {
     if (shouldReduceMotion) {
@@ -32,7 +28,9 @@ export const Time = () => {
   return (
     <div className="flex gap-1 text-muted-foreground text-sm tracking-widest">
       <span>{'//'}</span>
-      <span className="w-[100px] text-foreground tabular-nums">{time}</span>
+      <span suppressHydrationWarning className="w-[100px] text-foreground tabular-nums">
+        {time}
+      </span>
     </div>
   )
 }
