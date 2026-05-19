@@ -1,6 +1,6 @@
+import { createMetadata } from '@/lib/metadata'
 import { Hero } from './components/hero'
 import { Social } from './components/social'
-import { createMetadata } from '@/lib/metadata'
 
 export const metadata = createMetadata(
   'PunGrumpy — Link in Bio',

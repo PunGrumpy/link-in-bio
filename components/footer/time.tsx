@@ -1,7 +1,7 @@
 'use client'
 
-import { useAnimationFrame } from 'motion/react'
 import { useReducedMotion } from 'framer-motion'
+import { useAnimationFrame } from 'motion/react'
 import { useEffect, useState } from 'react'
 
 const formatTime = (date: Date) => {
