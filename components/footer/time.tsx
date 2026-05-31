@@ -28,7 +28,10 @@ export const Time = () => {
   return (
     <div className="flex gap-1 text-muted-foreground text-sm tracking-widest">
       <span>{'//'}</span>
-      <span suppressHydrationWarning className="w-[100px] text-foreground tabular-nums">
+      <span
+        className="w-[100px] text-foreground tabular-nums"
+        suppressHydrationWarning
+      >
         {time}
       </span>
     </div>
